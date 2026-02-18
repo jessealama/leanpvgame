@@ -1,0 +1,2851 @@
+msgid ""
+msgstr "Project-Id-Version: Game v4.26.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-19\n"
+"Last-Translator: \n"
+"Language-Team: none\n"
+"Language: en\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#. §0: `x ∈ insertSorted x l`
+#. §1: `l`
+#: Game.Levels.ProofsInTypes.L08_Victory
+msgid "§0 for any list §1"
+msgstr "§0 for any list §1"
+
+#. §0: `Sorted`
+#. §1: `List Nat`
+#. §2: ```lean
+#. @[simp] def Sorted : List Nat → Prop
+#.   | []          => True
+#.   | [_]         => True
+#.   | x :: y :: ys => x ≤ y ∧ Sorted (y :: ys)
+#. ```
+#. §3: `x :: y :: ys`
+#. §4: `x ≤ y`
+#. §5: `y :: ys`
+#. §6: `simp [Sorted] at h`
+#. §7: `simp [Sorted] at h`
+#. §8: `h : Sorted (x :: y :: ys)`
+#. §9: `h : x ≤ y ∧ Sorted (y :: ys)`
+#. §10: `.1`
+#. §11: `∧`
+#: Game.Levels.ProofsInTypes.L05_Sorted
+msgid "A **predicate on lists** can encode an invariant. Here is §0 for §1:\n"
+"\n"
+"§2\n"
+"\n"
+"- An empty list is trivially sorted.\n"
+"- A singleton list is trivially sorted.\n"
+"- A list §3 is sorted iff §4 and §5 is sorted.\n"
+"\n"
+"The tactic §6 unfolds the predicate **inside a hypothesis**.\n"
+"After §7 where §8,\n"
+"the hypothesis becomes §9.\n"
+"Then §10 extracts the left part of §11."
+msgstr "A **predicate on lists** can encode an invariant. Here is §0 for §1:\n"
+"\n"
+"§2\n"
+"\n"
+"- An empty list is trivially sorted.\n"
+"- A singleton list is trivially sorted.\n"
+"- A list §3 is sorted iff §4 and §5 is sorted.\n"
+"\n"
+"The tactic §6 unfolds the predicate **inside a hypothesis**.\n"
+"After §7 where §8,\n"
+"the hypothesis becomes §9.\n"
+"Then §10 extracts the left part of §11."
+
+#. §0: `native_decide`
+#. §1: `isPrime`
+#. §2: `isPrime`
+#. §3: `myGcd`
+#. §4: `myGcd`
+#: Game.Levels.FirstProofs.L07_Primality
+msgid "§0 compiled §1 to native code and **evaluated** each value\n"
+"and verify the result. Since §2 is a computable function (using §3),\n"
+"Lean can do this automatically — no manual proof steps needed.\n"
+"\n"
+"The same §4 you proved correct in levels 4–5 powers this verification.\n"
+"This is **program verification in action**: prove your building blocks correct,\n"
+"then compose them into larger verified programs.\n"
+"\n"
+"**Congratulations — you've completed World 1!**\n"
+"\n"
+"Continue to World 2 to learn how to write complete functional specifications."
+msgstr "§0 compiled §1 to native code and **evaluated** each value\n"
+"and verify the result. Since §2 is a computable function (using §3),\n"
+"Lean can do this automatically — no manual proof steps needed.\n"
+"\n"
+"The same §4 you proved correct in levels 4–5 powers this verification.\n"
+"This is **program verification in action**: prove your building blocks correct,\n"
+"then compose them into larger verified programs.\n"
+"\n"
+"**Congratulations — you've completed World 1!**\n"
+"\n"
+"Continue to World 2 to learn how to write complete functional specifications."
+
+#: Game.Levels.FirstProofs.L04_GcdBase
+msgid "GCD Base Case"
+msgstr "GCD Base Case"
+
+#: Game.Levels.FirstProofs
+msgid "First Proofs"
+msgstr "First Proofs"
+
+#: GameServer.RpcHandlers
+msgid "intermediate goal solved! 🎉"
+msgstr "intermediate goal solved! 🎉"
+
+#: Game.Levels.PurePrograms.L07_Expr
+msgid "Evaluate an expression to an integer."
+msgstr "Evaluate an expression to an integer."
+
+#. §0: `foldr (· :: ·) [] l = l`
+#. §1: `myFoldr`
+#: Game.Levels.PurePrograms.L03_MyFoldr
+msgid "§0 — folding cons and nil over a list reconstructs the list.\n"
+"This is called the **foldr identity law**, and it shows that §1 is the\n"
+"most general way to process a list."
+msgstr "§0 — folding cons and nil over a list reconstructs the list.\n"
+"This is called the **foldr identity law**, and it shows that §1 is the\n"
+"most general way to process a list."
+
+#. §0: `intro n m h`
+#. §1: `grind [double]`
+#. §2: `grind`
+#. §3: `double`
+#: Game.Levels.AutomationPower.L03_Grind
+msgid "After §0, try §1.\n"
+"This tells §2 to unfold §3 and then use arithmetic to finish."
+msgstr "After §0, try §1.\n"
+"This tells §2 to unfold §3 and then use arithmetic to finish."
+
+#. §0: `{x : T // P x}`
+#. §1: `Fin n`
+#. §2: `< n`
+#: Game.Levels.ProofsInTypes
+msgid "**Welcome to World 4: Proofs Packed in Types!**\n"
+"\n"
+"In Worlds 1–3 we proved *theorems about programs*.\n"
+"In this world, we go further: we pack those proofs *inside the types themselves*.\n"
+"\n"
+"The result: values whose types **guarantee** correctness.\n"
+"The compiler becomes the verifier — incorrect code simply won't compile.\n"
+"\n"
+"**New ideas in this world**:\n"
+"- **Subtypes** §0 — values bundled with their proof\n"
+"- **§1** — natural numbers that are provably §2\n"
+"- **Proof-carrying functions** — types that enforce pre/postconditions\n"
+"- **Invariant-preserving structures** — data structures that *cannot* violate their invariants"
+msgstr "**Welcome to World 4: Proofs Packed in Types!**\n"
+"\n"
+"In Worlds 1–3 we proved *theorems about programs*.\n"
+"In this world, we go further: we pack those proofs *inside the types themselves*.\n"
+"\n"
+"The result: values whose types **guarantee** correctness.\n"
+"The compiler becomes the verifier — incorrect code simply won't compile.\n"
+"\n"
+"**New ideas in this world**:\n"
+"- **Subtypes** §0 — values bundled with their proof\n"
+"- **§1** — natural numbers that are provably §2\n"
+"- **Proof-carrying functions** — types that enforce pre/postconditions\n"
+"- **Invariant-preserving structures** — data structures that *cannot* violate their invariants"
+
+#. §0: `simp [double]`
+#: Game.Levels.FirstProofs.L01_Double
+msgid "Now §0 will unfold the definition and close the goal."
+msgstr "Now §0 will unfold the definition and close the goal."
+
+#. §0: `mvcgen`
+#: Game.Levels.ImperativeBoss.L01_Stub
+msgid "This world is under construction.\n"
+"\n"
+"**World 8: Imperative Boss** is the final challenge: verify a complete imperative\n"
+"algorithm using loop invariants and the §0 framework. This is where\n"
+"everything comes together — functional specs, termination, data invariants,\n"
+"and Hoare logic — applied to real imperative code.\n"
+"\n"
+"Check back soon!"
+msgstr "This world is under construction.\n"
+"\n"
+"**World 8: Imperative Boss** is the final challenge: verify a complete imperative\n"
+"algorithm using loop invariants and the §0 framework. This is where\n"
+"everything comes together — functional specs, termination, data invariants,\n"
+"and Hoare logic — applied to real imperative code.\n"
+"\n"
+"Check back soon!"
+
+#. §0: `{n : Nat // n % 2 = 0}`
+#: Game.Levels.ProofsInTypes.L01_Subtype
+msgid "Subtype of even natural numbers: §0"
+msgstr "Subtype of even natural numbers: §0"
+
+#. §0: `intro h`
+#. §1: `h : myGcd a b = 1`
+#. §2: `exact h`
+#: Game.Levels.FirstProofs.L06_Coprime
+msgid "The backward direction: §0 gives §1. Use §2."
+msgstr "The backward direction: §0 gives §1. Use §2."
+
+#: Game
+msgid "## About this Game\n"
+"\n"
+"**Program Verification Game** teaches formal program verification using Lean 4.\n"
+"\n"
+"The curriculum covers an 8-world progression from basic functional proofs\n"
+"through imperative verification with loop invariants.\n"
+"\n"
+"**Version**: 0.1.0 (World 1 complete; Worlds 2–8 coming soon)\n"
+"\n"
+"**Source**: https://github.com/your-org/pvgame"
+msgstr "## About this Game\n"
+"\n"
+"**Program Verification Game** teaches formal program verification using Lean 4.\n"
+"\n"
+"The curriculum covers an 8-world progression from basic functional proofs\n"
+"through imperative verification with loop invariants.\n"
+"\n"
+"**Version**: 0.1.0 (World 1 complete; Worlds 2–8 coming soon)\n"
+"\n"
+"**Source**: https://github.com/your-org/pvgame"
+
+#: Game.Levels.Termination
+msgid "**World 4: Termination**\n"
+"\n"
+"Prove that programs always terminate. Learn structural recursion, well-founded\n"
+"measures, and how Lean's kernel ensures every recursive function has a proof\n"
+"that its recursive calls strictly decrease.\n"
+"\n"
+"*Coming soon!*"
+msgstr "**World 4: Termination**\n"
+"\n"
+"Prove that programs always terminate. Learn structural recursion, well-founded\n"
+"measures, and how Lean's kernel ensures every recursive function has a proof\n"
+"that its recursive calls strictly decrease.\n"
+"\n"
+"*Coming soon!*"
+
+#. §0: `@[simp]`
+#. §1: `cases h : p (f x)`
+#. §2: `simp_all [Function.comp_apply]`
+#. §3: `(p ∘ f) x = p (f x)`
+#. §4: `simp_all`
+#. §5: `@[simp]`
+#. §6: `grind`
+#. §7: `cases h : expr`
+#. §8: `simp_all`
+#: Game.Levels.AutomationPower.L07_FilterMap
+msgid "You've completed **World 3: Automation Power**!\n"
+"\n"
+"The §0 investment made both the filter and map cases automatic.\n"
+"§1 split the proof cleanly, and §2\n"
+"tied together §3, the filter branches, and the IH.\n"
+"\n"
+"What you've mastered:\n"
+"- **§4**: simplifies goals *and* hypotheses; IH is automatic\n"
+"- **§5**: tag your equations once, benefit everywhere\n"
+"- **§6**: equality reasoning + arithmetic in one call\n"
+"- **§7**: case-split and name the result for §8\n"
+"\n"
+"These tools will power every world that follows."
+msgstr "You've completed **World 3: Automation Power**!\n"
+"\n"
+"The §0 investment made both the filter and map cases automatic.\n"
+"§1 split the proof cleanly, and §2\n"
+"tied together §3, the filter branches, and the IH.\n"
+"\n"
+"What you've mastered:\n"
+"- **§4**: simplifies goals *and* hypotheses; IH is automatic\n"
+"- **§5**: tag your equations once, benefit everywhere\n"
+"- **§6**: equality reasoning + arithmetic in one call\n"
+"- **§7**: case-split and name the result for §8\n"
+"\n"
+"These tools will power every world that follows."
+
+#: Game.Levels.PurePrograms.L01_MyMap
+msgid "Mapping Over a List"
+msgstr "Mapping Over a List"
+
+#. §0: `induction l₁ <;> simp_all`
+#. §1: `@[simp]`
+#. §2: `myMap`
+#: Game.Levels.AutomationPower.L04_MapAppend
+msgid "Use §0.\n"
+"The §1 lemmas for §2 from Level 2 fire automatically."
+msgstr "Use §0.\n"
+"The §1 lemmas for §2 from Level 2 fire automatically."
+
+#. §0: `induction xs <;> simp_all <;> omega`
+#. §1: `<;>`
+#: Game.Levels.AutomationPower.L01_SimpAll
+msgid "Try §0.\n"
+"The §1 combinator applies the next tactic to *all* remaining goals at once."
+msgstr "Try §0.\n"
+"The §1 combinator applies the next tactic to *all* remaining goals at once."
+
+#. §0: ```lean
+#. myFilter p (myMap f l) = myMap f (myFilter (p ∘ f) l)
+#. ```
+#. §1: `myMap f l`
+#. §2: `p ∘ f`
+#. §3: `@[simp]`
+#. §4: `myMap`
+#. §5: `myFilter`
+#. §6: `simp_all`
+#. §7: ```lean
+#. induction l with
+#. | nil => simp
+#. | cons x xs ih =>
+#.   simp only [myMap_cons, myFilter_cons]
+#.   cases h : p (f x) <;> simp_all [Function.comp_apply]
+#. ```
+#. §8: `simp only [myMap_cons, myFilter_cons]`
+#. §9: `cases h : p (f x)`
+#. §10: `simp_all [Function.comp_apply]`
+#. §11: `(p ∘ f) x`
+#. §12: `p (f x)`
+#. §13: `if`
+#: Game.Levels.AutomationPower.L07_FilterMap
+msgid "The payoff level. This theorem appears in compilers, query optimizers, and\n"
+"functional programming textbooks: **filter-map fusion**.\n"
+"\n"
+"§0\n"
+"\n"
+"Filtering after mapping equals mapping after filtering with a composed\n"
+"predicate. Instead of building an intermediate list (§1) and then\n"
+"filtering it, you can filter the *original* list by the composed predicate\n"
+"§2 and map only the elements that pass.\n"
+"\n"
+"Without our automation tools, this would take 6+ manual lines. With\n"
+"§3 on both §4 and §5, and §6 finding the IH:\n"
+"\n"
+"§7\n"
+"\n"
+"- §8 expands both sides one step.\n"
+"- §9 splits on whether the element passes the filter.\n"
+"- §10 connects §11 to §12,\n"
+"  simplifies the §13 branches, and uses the IH."
+msgstr "The payoff level. This theorem appears in compilers, query optimizers, and\n"
+"functional programming textbooks: **filter-map fusion**.\n"
+"\n"
+"§0\n"
+"\n"
+"Filtering after mapping equals mapping after filtering with a composed\n"
+"predicate. Instead of building an intermediate list (§1) and then\n"
+"filtering it, you can filter the *original* list by the composed predicate\n"
+"§2 and map only the elements that pass.\n"
+"\n"
+"Without our automation tools, this would take 6+ manual lines. With\n"
+"§3 on both §4 and §5, and §6 finding the IH:\n"
+"\n"
+"§7\n"
+"\n"
+"- §8 expands both sides one step.\n"
+"- §9 splits on whether the element passes the filter.\n"
+"- §10 connects §11 to §12,\n"
+"  simplifies the §13 branches, and uses the IH."
+
+#. §0: `myGcd`
+#. §1: ```
+#. def myCoprime (a b : Nat) : Prop := myGcd a b = 1
+#. ```
+#. §2: `myCoprime a b`
+#. §3: `myGcd a b = 1`
+#. §4: `constructor`
+#. §5: `↔`
+#: Game.Levels.FirstProofs.L06_Coprime
+msgid "Two numbers are **coprime** (or relatively prime) if their GCD equals 1.\n"
+"This is a key concept in number theory and cryptography — for example,\n"
+"RSA encryption requires finding large coprime numbers.\n"
+"\n"
+"We define coprimality using §0:\n"
+"§1\n"
+"\n"
+"Prove that §2 is logically equivalent to §3.\n"
+"\n"
+"*Tip*: Use §4 to split a biconditional §5 into two implications."
+msgstr "Two numbers are **coprime** (or relatively prime) if their GCD equals 1.\n"
+"This is a key concept in number theory and cryptography — for example,\n"
+"RSA encryption requires finding large coprime numbers.\n"
+"\n"
+"We define coprimality using §0:\n"
+"§1\n"
+"\n"
+"Prove that §2 is logically equivalent to §3.\n"
+"\n"
+"*Tip*: Use §4 to split a biconditional §5 into two implications."
+
+#: Game.Levels.DataInvariants
+msgid "**World 5: Data Invariants**\n"
+"\n"
+"Maintain invariants over data structures: sorted lists, balanced trees,\n"
+"and how to carry proofs alongside data so that structural invariants can\n"
+"never be violated by construction.\n"
+"\n"
+"*Coming soon!*"
+msgstr "**World 5: Data Invariants**\n"
+"\n"
+"Maintain invariants over data structures: sorted lists, balanced trees,\n"
+"and how to carry proofs alongside data so that structural invariants can\n"
+"never be violated by construction.\n"
+"\n"
+"*Coming soon!*"
+
+#. §0: `{n : Nat // P n}`
+#. §1: `⟨n, h⟩`
+#. §2: `n : Nat`
+#. §3: `h : P n`
+#. §4: `h`
+#. §5: ```lean
+#. abbrev EvenNat := {n : Nat // n % 2 = 0}
+#. ```
+#. §6: `EvenNat`
+#. §7: ```lean
+#. -- This compiles: 4 is even
+#. example : EvenNat := ⟨4, by omega⟩
+#. 
+#. -- This is a type error: 3 is not even
+#. -- example : EvenNat := ⟨3, by omega⟩  -- omega can't prove 3 % 2 = 0
+#. ```
+#. §8: `n + n`
+#. §9: `omega`
+#: Game.Levels.ProofsInTypes.L01_Subtype
+msgid "In Lean, §0 is a **subtype** — a type whose values are pairs §1\n"
+"where §2 and §3. The proof §4 is packed directly inside the value.\n"
+"\n"
+"For example:\n"
+"§5\n"
+"A value of type §6 is guaranteed to be even — not by a runtime check, but by its type.\n"
+"\n"
+"§7\n"
+"\n"
+"The compiler is now the gatekeeper. To prove §8 is always even, use §9."
+msgstr "In Lean, §0 is a **subtype** — a type whose values are pairs §1\n"
+"where §2 and §3. The proof §4 is packed directly inside the value.\n"
+"\n"
+"For example:\n"
+"§5\n"
+"A value of type §6 is guaranteed to be even — not by a runtime check, but by its type.\n"
+"\n"
+"§7\n"
+"\n"
+"The compiler is now the gatekeeper. To prove §8 is always even, use §9."
+
+#: GameServer.RpcHandlers
+msgid "level completed with warnings… 🎭"
+msgstr "level completed with warnings… 🎭"
+
+#. §0: ```
+#. (xs ++ ys).length = xs.length + ys.length
+#. ```
+#. §1: `xs`
+#. §2: `ys`
+#. §3: `xs`
+#. §4: `xs = []`
+#. §5: `xs = x :: xs'`
+#. §6: `xs'`
+#: Game.Levels.FirstProofs.L03_ListLength
+msgid "Lists are everywhere in programming. Here's a fundamental property:\n"
+"if you concatenate two lists, the length of the result is the sum of their lengths.\n"
+"§0\n"
+"\n"
+"Prove this for **all** lists §1 and §2 of natural numbers.\n"
+"\n"
+"You'll need to reason by **structural induction** on the list §3:\n"
+"- **Base case**: §4 — the empty list is easy.\n"
+"- **Inductive step**: §5 — use the *induction hypothesis* about §6."
+msgstr "Lists are everywhere in programming. Here's a fundamental property:\n"
+"if you concatenate two lists, the length of the result is the sum of their lengths.\n"
+"§0\n"
+"\n"
+"Prove this for **all** lists §1 and §2 of natural numbers.\n"
+"\n"
+"You'll need to reason by **structural induction** on the list §3:\n"
+"- **Base case**: §4 — the empty list is easy.\n"
+"- **Inductive step**: §5 — use the *induction hypothesis* about §6."
+
+#: Game.Levels.PurePrograms.L01_MyMap
+msgid "Apply a function to every element of a list."
+msgstr "Apply a function to every element of a list."
+
+#. §0: ```lean
+#. def bstInsert (x : Nat) : Tree Nat → Tree Nat
+#.   | .leaf       => .node .leaf x .leaf
+#.   | .node l y r =>
+#.     if x < y then .node (bstInsert x l) y r
+#.     else if y < x then .node l y (bstInsert x r)
+#.     else .node l y r   -- x = y: already present
+#. 
+#. def bstMember (x : Nat) : Tree Nat → Bool
+#.   | .leaf       => false
+#.   | .node l y r =>
+#.     if x < y then bstMember x l
+#.     else if y < x then bstMember x r
+#.     else true
+#. ```
+#. §1: `x`
+#. §2: `x`
+#. §3: `true`
+#. §4: `induction t`
+#. §5: `leaf`
+#. §6: `simp [bstInsert, bstMember]`
+#. §7: `node`
+#. §8: `simp only [bstInsert]`
+#. §9: `by_cases h : x < y`
+#. §10: `simp [h, bstMember, ...]`
+#: Game.Levels.PurePrograms.L06_BST
+msgid "A **Binary Search Tree (BST)** stores values in sorted order so we can search in\n"
+"O(log n) time. The key property: every value in the left subtree is smaller than\n"
+"the node's value, and every value in the right subtree is larger.\n"
+"\n"
+"§0\n"
+"\n"
+"**Your goal**: prove that after inserting §1, searching for §2 always returns §3.\n"
+"\n"
+"*Hint*: Use §4. For the §5 case, §6 closes it.\n"
+"For the §7 case, use §8 to unfold the insert, then\n"
+"§9 to split on the comparison, and close each branch with\n"
+"§10."
+msgstr "A **Binary Search Tree (BST)** stores values in sorted order so we can search in\n"
+"O(log n) time. The key property: every value in the left subtree is smaller than\n"
+"the node's value, and every value in the right subtree is larger.\n"
+"\n"
+"§0\n"
+"\n"
+"**Your goal**: prove that after inserting §1, searching for §2 always returns §3.\n"
+"\n"
+"*Hint*: Use §4. For the §5 case, §6 closes it.\n"
+"For the §7 case, use §8 to unfold the insert, then\n"
+"§9 to split on the comparison, and close each branch with\n"
+"§10."
+
+#: Game.Levels.PurePrograms.L05_Tree
+msgid "Binary Trees"
+msgstr "Binary Trees"
+
+#: Game.Levels.PurePrograms.L03_MyFoldr
+msgid "Fold a list from the right with a binary function and initial value."
+msgstr "Fold a list from the right with a binary function and initial value."
+
+#. §0: `intro h`
+#. §1: `h : myCoprime a b`
+#. §2: `exact h`
+#: Game.Levels.FirstProofs.L06_Coprime
+msgid "The forward direction: §0 gives §1. Use §2."
+msgstr "The forward direction: §0 gives §1. Use §2."
+
+#. §0: `simp [double]`
+#. §1: `double`
+#: Game.Levels.FirstProofs.L01_Double
+msgid "Lean accepted your proof!\n"
+"\n"
+"§0 unfolded the definition of §1 and closed the goal by reflexivity.\n"
+"\n"
+"You have formally verified your first program. Welcome to program verification!"
+msgstr "Lean accepted your proof!\n"
+"\n"
+"§0 unfolded the definition of §1 and closed the goal by reflexivity.\n"
+"\n"
+"You have formally verified your first program. Welcome to program verification!"
+
+#. §0: `l`
+#. §1: `cons`
+#. §2: `simp only [myMap_cons, myFilter_cons]`
+#. §3: `cases h : p (f x) <;> simp_all [Function.comp_apply]`
+#: Game.Levels.AutomationPower.L07_FilterMap
+msgid "Induct on §0. For the §1 case:\n"
+"§2, then\n"
+"§3."
+msgstr "Induct on §0. For the §1 case:\n"
+"§2, then\n"
+"§3."
+
+#. §0: `insertSorted`
+#: Game.Levels.ProofsInTypes.L07_InsertSorted
+msgid "Proved once, trusted forever. Any call to §0 on a sorted list yields\n"
+"a sorted list — the compiler will hold us to this contract on every use."
+msgstr "Proved once, trusted forever. Any call to §0 on a sorted list yields\n"
+"a sorted list — the compiler will hold us to this contract on every use."
+
+#. §0: `SortedList`
+#. §1: `Sorted data`
+#: Game.Levels.ProofsInTypes.L06_SortedList
+msgid "The empty §0 has §1."
+msgstr "The empty §0 has §1."
+
+#: Game.Levels.ProofsInTypes.L05_Sorted
+msgid "Sorted: An Inductive Predicate"
+msgstr "Sorted: An Inductive Predicate"
+
+#. §0: `Sorted (x :: y :: ys)`
+#. §1: `x ≤ y`
+#: Game.Levels.ProofsInTypes.L05_Sorted
+msgid "If §0, then §1"
+msgstr "If §0, then §1"
+
+#: Game.Levels.PurePrograms.L06_BST
+msgid "Binary Search Tree"
+msgstr "Binary Search Tree"
+
+#. §0: `simp [Sorted] at h`
+#. §1: `h`
+#. §2: `.1`
+#. §3: `∧`
+#: Game.Levels.ProofsInTypes.L05_Sorted
+msgid "§0 unfolds the predicate in hypothesis §1. Then §2 extracts the left part of §3."
+msgstr "§0 unfolds the predicate in hypothesis §1. Then §2 extracts the left part of §3."
+
+#. §0: `Fin n`
+#. §1: `n`
+#. §2: `.val : Nat`
+#. §3: `.isLt : val < n`
+#. §4: ```lean
+#. -- This compiles: 3 < 5
+#. example : Fin 5 := ⟨3, by omega⟩
+#. 
+#. -- This is a type error: 7 < 5 is false
+#. -- example : Fin 5 := ⟨7, by omega⟩  -- omega can't prove 7 < 5
+#. ```
+#. §5: `Fin`
+#. §6: `Option`
+#: Game.Levels.ProofsInTypes.L03_Fin
+msgid "§0 is Lean's built-in type of natural numbers **strictly less than §1**.\n"
+"It's a subtype with two fields:\n"
+"- §2 — the number\n"
+"- §3 — the proof it's in bounds\n"
+"\n"
+"§4\n"
+"\n"
+"Array indexing with §5 is **always safe** — no runtime bounds check, no §6,\n"
+"no panic. The bound is verified once, at compile time."
+msgstr "§0 is Lean's built-in type of natural numbers **strictly less than §1**.\n"
+"It's a subtype with two fields:\n"
+"- §2 — the number\n"
+"- §3 — the proof it's in bounds\n"
+"\n"
+"§4\n"
+"\n"
+"Array indexing with §5 is **always safe** — no runtime bounds check, no §6,\n"
+"no panic. The bound is verified once, at compile time."
+
+#. §0: `map`
+#. §1: ```lean
+#. def myMap {α β : Type} (f : α → β) : List α → List β
+#.   | []      => []
+#.   | x :: xs => f x :: myMap f xs
+#. ```
+#. §2: `myMap`
+#. §3: `f : α → β`
+#. §4: `α`
+#. §5: `β`
+#. §6: `myMap`
+#. §7: `induction`
+#. §8: `simp [myMap]`
+#: Game.Levels.PurePrograms.L01_MyMap
+msgid "In functional programming, §0 applies a function to every element of a list.\n"
+"Let's define our own version and prove a key property about it.\n"
+"\n"
+"§1\n"
+"\n"
+"§2 takes a function §3 and a list of §4s, returning a list of §5s.\n"
+"The output list has the same number of elements as the input.\n"
+"\n"
+"**Your goal**: prove that §6 preserves the length of any list.\n"
+"\n"
+"*Hint*: Use §7 on the list, then §8 with the induction hypothesis."
+msgstr "In functional programming, §0 applies a function to every element of a list.\n"
+"Let's define our own version and prove a key property about it.\n"
+"\n"
+"§1\n"
+"\n"
+"§2 takes a function §3 and a list of §4s, returning a list of §5s.\n"
+"The output list has the same number of elements as the input.\n"
+"\n"
+"**Your goal**: prove that §6 preserves the length of any list.\n"
+"\n"
+"*Hint*: Use §7 on the list, then §8 with the induction hypothesis."
+
+#. §0: `intro a b h`
+#. §1: `cases b`
+#. §2: `b = 0`
+#. §3: `b = b' + 1`
+#: Game.Levels.FirstProofs.L05_GcdStep
+msgid "Use §0, then §1 to split on whether §2 or §3."
+msgstr "Use §0, then §1 to split on whether §2 or §3."
+
+#. §0: `b ≠ 0`
+#. §1: `myGcd a b = myGcd b (a % b)`
+#: Game.Levels.FirstProofs.L05_GcdStep
+msgid "When §0, §1."
+msgstr "When §0, §1."
+
+#. §0: ```
+#. def isEven (n : Nat) : Prop := n % 2 = 0
+#. ```
+#. §1: `double n = n + n`
+#. §2: `simp [isEven, double]`
+#. §3: `omega`
+#: Game.Levels.FirstProofs.L02_IsEven
+msgid "A natural number is **even** if it is divisible by 2.\n"
+"We can express this as a proposition in Lean:\n"
+"§0\n"
+"\n"
+"In the previous level, you proved that §1.\n"
+"Now prove that doubling any number always produces an even number.\n"
+"\n"
+"*Tip*: §2 can unfold both definitions at once,\n"
+"then §3 handles the arithmetic."
+msgstr "A natural number is **even** if it is divisible by 2.\n"
+"We can express this as a proposition in Lean:\n"
+"§0\n"
+"\n"
+"In the previous level, you proved that §1.\n"
+"Now prove that doubling any number always produces an even number.\n"
+"\n"
+"*Tip*: §2 can unfold both definitions at once,\n"
+"then §3 handles the arithmetic."
+
+#: Game.Levels.ProofsInTypes
+msgid "Proofs Packed in Types"
+msgstr "Proofs Packed in Types"
+
+#: Game.Levels.PurePrograms.L06_BST
+msgid "Search for a value in a BST."
+msgstr "Search for a value in a BST."
+
+#. §0: `simp [isEven, double]`
+#: Game.Levels.FirstProofs.L02_IsEven
+msgid "Try §0 to unfold both definitions."
+msgstr "Try §0 to unfold both definitions."
+
+#. §0: `mvcgen`
+#: Game.Levels.ImperativeBoss
+msgid "**World 8: Imperative Boss**\n"
+"\n"
+"The final challenge: verify a complete imperative algorithm using loop\n"
+"invariants and the §0 framework. Everything comes together here —\n"
+"functional specs, termination proofs, data invariants, and Hoare logic —\n"
+"applied to real imperative code.\n"
+"\n"
+"*Coming soon!*"
+msgstr "**World 8: Imperative Boss**\n"
+"\n"
+"The final challenge: verify a complete imperative algorithm using loop\n"
+"invariants and the §0 framework. Everything comes together here —\n"
+"functional specs, termination proofs, data invariants, and Hoare logic —\n"
+"applied to real imperative code.\n"
+"\n"
+"*Coming soon!*"
+
+#. §0: `simp_all`
+#. §1: `simp`
+#. §2: `@[simp]`
+#. §3: `myMap`
+#. §4: `@[simp]`
+#. §5: `simp`
+#. §6: `simp [myMap]`
+#. §7: `grind`
+#. §8: `grind [lemma, ...]`
+#. §9: `myMap`
+#. §10: `myFilter`
+#: Game.Levels.AutomationPower
+msgid "Welcome to **World 3: Automation Power**!\n"
+"\n"
+"You've proven programs correct one tactic at a time. Now we hand more\n"
+"work to Lean's automation machinery — the same proofs that took five\n"
+"lines before will often collapse to one or two.\n"
+"\n"
+"**New tools in this world**:\n"
+"\n"
+"- **§0** — like §1, but also rewrites using every hypothesis\n"
+"  in the context. The induction hypothesis becomes automatic.\n"
+"- **§2** — an *attribute* that marks a theorem as a simplification\n"
+"  rule. After tagging the equations of §3 with §4, plain\n"
+"  §5 knows about them everywhere — no need to write §6.\n"
+"- **§7** — an automated prover combining equality reasoning and\n"
+"  arithmetic. Feed it hints with §8 and it hunts for\n"
+"  a proof automatically.\n"
+"\n"
+"You'll revisit §9, §10, and the BST from World 2 — and\n"
+"prove brand-new theorems about them with far less effort."
+msgstr "Welcome to **World 3: Automation Power**!\n"
+"\n"
+"You've proven programs correct one tactic at a time. Now we hand more\n"
+"work to Lean's automation machinery — the same proofs that took five\n"
+"lines before will often collapse to one or two.\n"
+"\n"
+"**New tools in this world**:\n"
+"\n"
+"- **§0** — like §1, but also rewrites using every hypothesis\n"
+"  in the context. The induction hypothesis becomes automatic.\n"
+"- **§2** — an *attribute* that marks a theorem as a simplification\n"
+"  rule. After tagging the equations of §3 with §4, plain\n"
+"  §5 knows about them everywhere — no need to write §6.\n"
+"- **§7** — an automated prover combining equality reasoning and\n"
+"  arithmetic. Feed it hints with §8 and it hunts for\n"
+"  a proof automatically.\n"
+"\n"
+"You'll revisit §9, §10, and the BST from World 2 — and\n"
+"prove brand-new theorems about them with far less effort."
+
+#: Game.Levels.AutomationPower
+msgid "Automation Power"
+msgstr "Automation Power"
+
+#. §0: `exact e.2`
+#. §1: `exact e.property`
+#: Game.Levels.ProofsInTypes.L02_SubtypeAccess
+msgid "Try §0 or §1."
+msgstr "Try §0 or §1."
+
+#: Game.Levels.AutomationPower.L05_FilterPartition
+msgid "Filter Partitions a List"
+msgstr "Filter Partitions a List"
+
+#. §0: `intro n`
+#: Game.Levels.FirstProofs.L02_IsEven
+msgid "Start with §0 to introduce the variable."
+msgstr "Start with §0 to introduce the variable."
+
+#: Game.Levels.ProofsInTypes.L07_InsertSorted
+msgid "Inserting into a sorted list yields a sorted list."
+msgstr "Inserting into a sorted list yields a sorted list."
+
+#. §0: `do`
+#: Game.Levels.ImperativeIntro.L01_Stub
+msgid "This world is under construction.\n"
+"\n"
+"**World 7: Imperative Intro** will teach you to verify imperative programs\n"
+"that use mutable state, loops, and §0 notation — and prove they meet their\n"
+"functional specifications.\n"
+"\n"
+"Check back soon!"
+msgstr "This world is under construction.\n"
+"\n"
+"**World 7: Imperative Intro** will teach you to verify imperative programs\n"
+"that use mutable state, loops, and §0 notation — and prove they meet their\n"
+"functional specifications.\n"
+"\n"
+"Check back soon!"
+
+#. §0: `n`
+#: Game.Levels.ProofsInTypes.L03_Fin
+msgid "Type of natural numbers strictly less than §0, bundled with the proof."
+msgstr "Type of natural numbers strictly less than §0, bundled with the proof."
+
+#. §0: `x :: xs`
+#. §1: `simp [ih]`
+#. §2: `omega`
+#: Game.Levels.FirstProofs.L03_ListLength
+msgid "For §0, try §1 then §2 for the arithmetic."
+msgstr "For §0, try §1 then §2 for the arithmetic."
+
+#. §0: `¬p`
+#. §1: `if p then a else b = b`
+#: Game.Levels.ProofsInTypes.L07_InsertSorted
+#: Game.Levels.ProofsInTypes.L07_InsertSorted
+msgid "If §0, then §1."
+msgstr "If §0, then §1."
+
+#: Game.Levels.AutomationPower.L04_MapAppend
+msgid "Map Distributes Over Append"
+msgstr "Map Distributes Over Append"
+
+#. §0: `rfl`
+#. §1: `safeHead (x :: xs) _`
+#. §2: `x`
+#. §3: `none`
+#: Game.Levels.ProofsInTypes.L04_SafeHead
+msgid "§0 works because §1 *definitionally equals* §2.\n"
+"The compiler verified the precondition; we never needed to handle §3."
+msgstr "§0 works because §1 *definitionally equals* §2.\n"
+"The compiler verified the precondition; we never needed to handle §3."
+
+#. §0: `a`
+#. §1: `b`
+#. §2: `myGcd a b = 1`
+#: Game.Levels.FirstProofs.L06_Coprime
+msgid "§0 and §1 are coprime iff §2."
+msgstr "§0 and §1 are coprime iff §2."
+
+#: Game.Levels.PurePrograms.L07_Expr
+msgid "Expression Evaluator"
+msgstr "Expression Evaluator"
+
+#: Game.Levels.AutomationPower.L06_GrindBST
+msgid "BST Insert: simp_all in Action"
+msgstr "BST Insert: simp_all in Action"
+
+#: Game.Levels.FirstProofs.L03_ListLength
+msgid "Length of Lists"
+msgstr "Length of Lists"
+
+#. §0: `intro xs ys`
+#. §1: `induction xs`
+#: Game.Levels.FirstProofs.L03_ListLength
+msgid "Start with §0, then use §1."
+msgstr "Start with §0, then use §1."
+
+#: Game.Levels.FirstProofs.L01_Double
+msgid "Double or Nothing"
+msgstr "Double or Nothing"
+
+#: Game.Levels.FirstProofs.L07_Primality
+msgid "Is This Prime?"
+msgstr "Is This Prime?"
+
+#: Game.Levels.ProofsInTypes.L04_SafeHead
+msgid "Safe Head: Proof-Carrying Functions"
+msgstr "Safe Head: Proof-Carrying Functions"
+
+#. §0: `@[simp]`
+#. §1: `myMap`
+#. §2: `simp_all`
+#. §3: `@[simp]`
+#. §4: `@[simp]`
+#. §5: `simp`
+#. §6: `simp_all`
+#: Game.Levels.AutomationPower.L02_SimpAttr
+msgid "§0 turned §1's equation lemmas into permanent simplification rules.\n"
+"§2 then used them (plus the IH) to close both the base and inductive cases\n"
+"without any manual guidance.\n"
+"\n"
+"This is the §3 workflow:\n"
+"1. Tag your function's equations with §4.\n"
+"2. From then on, use plain §5 or §6 — no hints needed."
+msgstr "§0 turned §1's equation lemmas into permanent simplification rules.\n"
+"§2 then used them (plus the IH) to close both the base and inductive cases\n"
+"without any manual guidance.\n"
+"\n"
+"This is the §3 workflow:\n"
+"1. Tag your function's equations with §4.\n"
+"2. From then on, use plain §5 or §6 — no hints needed."
+
+#. §0: `double n = n + n`
+#: Game.Levels.FirstProofs.L01_Double
+#: Game.Levels.FirstProofs.L02_IsEven
+#: Game.Levels.FirstProofs.L03_ListLength
+#: Game.Levels.FirstProofs.L04_GcdBase
+#: Game.Levels.FirstProofs.L06_Coprime
+#: Game.Levels.PurePrograms.L01_MyMap
+#: Game.Levels.PurePrograms.L02_MyFilter
+#: Game.Levels.PurePrograms.L03_MyFoldr
+#: Game.Levels.PurePrograms.L05_Tree
+#: Game.Levels.PurePrograms.L06_BST
+#: Game.Levels.PurePrograms.L07_Expr
+#: Game.Levels.PurePrograms.L07_Expr
+#: Game.Levels.AutomationPower.L02_SimpAttr
+#: Game.Levels.AutomationPower.L02_SimpAttr
+#: Game.Levels.AutomationPower.L02_SimpAttr
+#: Game.Levels.AutomationPower.L02_SimpAttr
+#: Game.Levels.AutomationPower.L03_Grind
+#: Game.Levels.AutomationPower.L03_Grind
+#: Game.Levels.AutomationPower.L04_MapAppend
+#: Game.Levels.AutomationPower.L05_FilterPartition
+#: Game.Levels.AutomationPower.L05_FilterPartition
+#: Game.Levels.AutomationPower.L05_FilterPartition
+#: Game.Levels.AutomationPower.L07_FilterMap
+#: Game.Levels.ProofsInTypes.L04_SafeHead
+#: Game.Levels.ProofsInTypes.L07_InsertSorted
+#: Game.Levels.ProofsInTypes.L08_Victory
+msgid "§0"
+msgstr "§0"
+
+#. §0: `myFilter p l`
+#. §1: `l`
+#. §2: `p`
+#: Game.Levels.AutomationPower.L05_FilterPartition
+msgid "§0 returns the sublist of §1 whose elements satisfy predicate §2."
+msgstr "§0 returns the sublist of §1 whose elements satisfy predicate §2."
+
+#: Game.Levels.ProofsInTypes.L07_InsertSorted
+msgid "insertSorted: Preserving the Invariant"
+msgstr "insertSorted: Preserving the Invariant"
+
+#. §0: `SortedList.insert`
+#. §1: `.data`
+#. §2: `insertSorted x sl.data`
+#. §3: `insertSorted_mem`
+#: Game.Levels.ProofsInTypes.L08_Victory
+msgid "Unfold §0. The result's §1 is §2.\n"
+"Then apply §3."
+msgstr "Unfold §0. The result's §1 is §2.\n"
+"Then apply §3."
+
+#. §0: `filter`
+#. §1: `Bool`
+#. §2: ```lean
+#. def myFilter {α : Type} (p : α → Bool) : List α → List α
+#.   | []      => []
+#.   | x :: xs => if p x then x :: myFilter p xs else myFilter p xs
+#. ```
+#. §3: `p x`
+#. §4: `true`
+#. §5: `x`
+#. §6: `simp [myFilter]`
+#. §7: `split`
+#. §8: `p x`
+#. §9: `simp_all`
+#. §10: `omega`
+#: Game.Levels.PurePrograms.L02_MyFilter
+msgid "§0 keeps only the elements that satisfy a predicate (a function returning §1).\n"
+"\n"
+"§2\n"
+"\n"
+"When §3 is §4, we keep §5; otherwise we drop it.\n"
+"\n"
+"**Your goal**: prove that filtering never makes a list longer.\n"
+"\n"
+"*Hint*: After §6, use §7 to case-split on whether §8 is true or false,\n"
+"then finish with §9 and §10."
+msgstr "§0 keeps only the elements that satisfy a predicate (a function returning §1).\n"
+"\n"
+"§2\n"
+"\n"
+"When §3 is §4, we keep §5; otherwise we drop it.\n"
+"\n"
+"**Your goal**: prove that filtering never makes a list longer.\n"
+"\n"
+"*Hint*: After §6, use §7 to case-split on whether §8 is true or false,\n"
+"then finish with §9 and §10."
+
+#. §0: `e : EvenNat`
+#. §1: `e.val % 2 = 0`
+#: Game.Levels.ProofsInTypes.L02_SubtypeAccess
+#: Game.Levels.ProofsInTypes.L03_Fin
+msgid "For any §0, §1"
+msgstr "For any §0, §1"
+
+#. §0: `SortedList`
+#. §1: `SortedList`
+#: Game.Levels.ProofsInTypes.L06_SortedList
+msgid "§0 bakes the invariant into the type. You get correctness for free —\n"
+"any function that takes a §1 can trust it's sorted, no check needed."
+msgstr "§0 bakes the invariant into the type. You get correctness for free —\n"
+"any function that takes a §1 can trust it's sorted, no check needed."
+
+#. §0: `i.isLt`
+#. §1: `Fin`
+#: Game.Levels.ProofsInTypes.L03_Fin
+msgid "§0 is always there, always valid. That's the promise of §1."
+msgstr "§0 is always there, always valid. That's the promise of §1."
+
+#. §0: ```lean
+#. def half (n : Nat) : Nat :=
+#.   if n < 2 then 0 else 1 + half (n - 2)
+#. ```
+#. §1: `n - 2`
+#. §2: `n`
+#. §3: `n - 2 < n`
+#. §4: ```lean
+#. def half (n : Nat) : Nat :=
+#.   if n < 2 then 0 else 1 + half (n - 2)
+#. termination_by n
+#. decreasing_by omega
+#. ```
+#. §5: `termination_by n`
+#. §6: `n`
+#. §7: `decreasing_by omega`
+#. §8: `omega`
+#. §9: `n - 2 < n`
+#. §10: `¬(n < 2)`
+#. §11: `half`
+#. §12: `native_decide`
+#. §13: `decreasing_by omega`
+#. §14: `n ≥ 2`
+#. §15: `n - 2 < n`
+#. §16: `omega`
+#: Game.Levels.PurePrograms.L04_Half
+msgid "Until now, every recursive function you've seen has been **structurally recursive**:\n"
+"each recursive call is on a smaller piece of the input (a tail, a subtree).\n"
+"Lean accepts these automatically.\n"
+"\n"
+"But what about this?\n"
+"\n"
+"§0\n"
+"\n"
+"Lean **rejects** this without a termination proof! The recursive call is on §1,\n"
+"not a structural predecessor of §2. Lean can't automatically verify that §3.\n"
+"\n"
+"We fix this with a **termination measure**:\n"
+"\n"
+"§4\n"
+"\n"
+"§5 says: *the measure is just §6 itself*.\n"
+"§7 says: *trust §8 to prove §9 when §10*.\n"
+"\n"
+"**Your goal** has two parts:\n"
+"1. Verify concrete values of §11 (using §12).\n"
+"2. Prove the key arithmetic fact that makes §13 work: when §14, we have §15.\n"
+"\n"
+"The second part is exactly the inequality §16 closes automatically — try it manually!"
+msgstr "Until now, every recursive function you've seen has been **structurally recursive**:\n"
+"each recursive call is on a smaller piece of the input (a tail, a subtree).\n"
+"Lean accepts these automatically.\n"
+"\n"
+"But what about this?\n"
+"\n"
+"§0\n"
+"\n"
+"Lean **rejects** this without a termination proof! The recursive call is on §1,\n"
+"not a structural predecessor of §2. Lean can't automatically verify that §3.\n"
+"\n"
+"We fix this with a **termination measure**:\n"
+"\n"
+"§4\n"
+"\n"
+"§5 says: *the measure is just §6 itself*.\n"
+"§7 says: *trust §8 to prove §9 when §10*.\n"
+"\n"
+"**Your goal** has two parts:\n"
+"1. Verify concrete values of §11 (using §12).\n"
+"2. Prove the key arithmetic fact that makes §13 work: when §14, we have §15.\n"
+"\n"
+"The second part is exactly the inequality §16 closes automatically — try it manually!"
+
+#. §0: `native_decide`
+#: Game.Levels.FirstProofs.L07_Primality
+msgid "All of these are concrete computations. Try §0!"
+msgstr "All of these are concrete computations. Try §0!"
+
+#. §0: ```
+#. def myGcd (a b : Nat) : Nat :=
+#.   match b with
+#.   | 0     => a
+#.   | b' + 1 => myGcd (b' + 1) (a % (b' + 1))
+#. ```
+#. §1: `(a, b)`
+#. §2: `(b, a % b)`
+#. §3: `b = 0`
+#. §4: `b = 0`
+#. §5: `myGcd a 0 = a`
+#: Game.Levels.FirstProofs.L04_GcdBase
+msgid "The **Euclidean algorithm** is one of the oldest algorithms in mathematics.\n"
+"It computes the greatest common divisor (GCD) of two numbers:\n"
+"§0\n"
+"\n"
+"The algorithm works by repeatedly replacing §1 with §2 until §3.\n"
+"\n"
+"Prove the **base case**: when §4, §5."
+msgstr "The **Euclidean algorithm** is one of the oldest algorithms in mathematics.\n"
+"It computes the greatest common divisor (GCD) of two numbers:\n"
+"§0\n"
+"\n"
+"The algorithm works by repeatedly replacing §1 with §2 until §3.\n"
+"\n"
+"Prove the **base case**: when §4, §5."
+
+#. §0: `List.head?`
+#. §1: `Option α`
+#. §2: `none`
+#. §3: ```lean
+#. def safeHead {α : Type} (l : List α) (_ : l ≠ []) : α :=
+#.   match l with
+#.   | x :: _ => x
+#.   | []      => by contradiction
+#. ```
+#. §4: `safeHead [] h`
+#. §5: `[] ≠ []`
+#. §6: `α`
+#. §7: `Option`
+#. §8: `safeHead`
+#. §9: `safeHead`
+#: Game.Levels.ProofsInTypes.L04_SafeHead
+msgid "§0 returns §1 — safe, but forces callers to handle §2 everywhere,\n"
+"even when they *know* the list is non-empty.\n"
+"\n"
+"Instead, we can demand a **proof** of non-emptiness as an argument:\n"
+"\n"
+"§3\n"
+"\n"
+"Calling §4 is a **type error** — you cannot provide a proof of §5.\n"
+"The function returns §6 directly; no §7 unwrapping needed.\n"
+"\n"
+"The statement below says §8 on a cons list returns the head element. Because\n"
+"§9 reduces definitionally, the proof is trivial."
+msgstr "§0 returns §1 — safe, but forces callers to handle §2 everywhere,\n"
+"even when they *know* the list is non-empty.\n"
+"\n"
+"Instead, we can demand a **proof** of non-emptiness as an argument:\n"
+"\n"
+"§3\n"
+"\n"
+"Calling §4 is a **type error** — you cannot provide a proof of §5.\n"
+"The function returns §6 directly; no §7 unwrapping needed.\n"
+"\n"
+"The statement below says §8 on a cons list returns the head element. Because\n"
+"§9 reduces definitionally, the proof is trivial."
+
+#. §0: `omega`
+#: Game.Levels.FirstProofs.L02_IsEven
+msgid "The remaining goal is an arithmetic fact. Try §0."
+msgstr "The remaining goal is an arithmetic fact. Try §0."
+
+#. §0: `(xs ++ ys).length = xs.length + ys.length`
+#. §1: `simp_all`
+#: Game.Levels.AutomationPower.L01_SimpAll
+msgid "§0 (proved with §1)"
+msgstr "§0 (proved with §1)"
+
+#. §0: `simp [myGcd]`
+#. §1: `| 0 => a`
+#. §2: `a`
+#. §3: `termination_by b`
+#. §4: `a % (b' + 1) < b' + 1`
+#: Game.Levels.FirstProofs.L04_GcdBase
+msgid "§0 matched the §1 case of the definition and immediately\n"
+"returned §2. The base case is proved!\n"
+"\n"
+"Notice §3: this tells Lean that the second argument decreases at each\n"
+"recursive call (since §4). Without this, Lean would reject the definition."
+msgstr "§0 matched the §1 case of the definition and immediately\n"
+"returned §2. The base case is proved!\n"
+"\n"
+"Notice §3: this tells Lean that the second argument decreases at each\n"
+"recursive call (since §4). Without this, Lean would reject the definition."
+
+#: Game.Levels.AutomationPower.L02_SimpAttr
+msgid "@[simp]: Teaching simp New Rules"
+msgstr "@[simp]: Teaching simp New Rules"
+
+#: Game
+msgid "Learn to formally verify programs using Lean 4, from basic proofs to imperative algorithms."
+msgstr "Learn to formally verify programs using Lean 4, from basic proofs to imperative algorithms."
+
+#: Game.Levels.AutomationPower.L06_GrindBST
+msgid "A binary tree: either a leaf or a node with left subtree, value, and right subtree."
+msgstr "A binary tree: either a leaf or a node with left subtree, value, and right subtree."
+
+#. §0: `isPrime 2 = true`
+#. §1: `isPrime 3 = true`
+#. §2: `isPrime 4 = false`
+#. §3: `isPrime 5 = true`
+#: Game.Levels.FirstProofs.L07_Primality
+msgid "§0, §1, §2, §3"
+msgstr "§0, §1, §2, §3"
+
+#: Game.Levels.ProofsInTypes.L08_Victory
+msgid "World 4 complete! You've packed proofs into types:\n"
+"\n"
+"- **EvenNat** — only even numbers can be constructed\n"
+"- **Fin n** — indices that are provably in-bounds\n"
+"- **safeHead** — a head function that cannot be called on empty lists\n"
+"- **Sorted** — a predicate encoding a list's invariant\n"
+"- **SortedList** — a type where sortedness is enforced at construction\n"
+"- **SortedList.insert** — insertion that preserves sortedness, verified once for all time\n"
+"\n"
+"Onward to World 5: Termination!"
+msgstr "World 4 complete! You've packed proofs into types:\n"
+"\n"
+"- **EvenNat** — only even numbers can be constructed\n"
+"- **Fin n** — indices that are provably in-bounds\n"
+"- **safeHead** — a head function that cannot be called on empty lists\n"
+"- **Sorted** — a predicate encoding a list's invariant\n"
+"- **SortedList** — a type where sortedness is enforced at construction\n"
+"- **SortedList.insert** — insertion that preserves sortedness, verified once for all time\n"
+"\n"
+"Onward to World 5: Termination!"
+
+#. §0: `omega`
+#: Game.Levels.ProofsInTypes.L01_Subtype
+msgid "§0 closes pure arithmetic goals."
+msgstr "§0 closes pure arithmetic goals."
+
+#. §0: `induction l`
+#. §1: `simp`
+#. §2: `cons x xs ih`
+#. §3: `cases h : p x <;> simp_all <;> omega`
+#: Game.Levels.AutomationPower.L05_FilterPartition
+msgid "Use §0. The base case is §1.\n"
+"For §2, try §3."
+msgstr "Use §0. The base case is §1.\n"
+"For §2, try §3."
+
+#. §0: `do`
+#: Game.Levels.ImperativeIntro
+msgid "**World 7: Imperative Intro**\n"
+"\n"
+"From pure to imperative: verify programs that use mutable state, loops,\n"
+"and Lean's §0 notation. Learn how functional verification techniques\n"
+"extend to imperative programs.\n"
+"\n"
+"*Coming soon!*"
+msgstr "**World 7: Imperative Intro**\n"
+"\n"
+"From pure to imperative: verify programs that use mutable state, loops,\n"
+"and Lean's §0 notation. Learn how functional verification techniques\n"
+"extend to imperative programs.\n"
+"\n"
+"*Coming soon!*"
+
+#. §0: `.val`
+#. §1: `.property`
+#: Game.Levels.ProofsInTypes.L02_SubtypeAccess
+msgid "§0 gives the data; §1 gives the proof. Both are always present."
+msgstr "§0 gives the data; §1 gives the proof. Both are always present."
+
+#: Game.Levels.AutomationPower.L06_GrindBST
+msgid "Insert a value into a binary search tree, maintaining the BST ordering invariant."
+msgstr "Insert a value into a binary search tree, maintaining the BST ordering invariant."
+
+#: Game.Levels.AutomationPower.L03_Grind
+msgid "grind: The Automated Prover"
+msgstr "grind: The Automated Prover"
+
+#. §0: `termination_by <measure>`
+#. §1: `decreasing_by <tactic>`
+#. §2: `omega`
+#: Game.Levels.PurePrograms.L04_Half
+msgid "You've hit the termination wall — and climbed it!\n"
+"\n"
+"- **Structural recursion**: Lean accepts it for free (lists, trees).\n"
+"- **Non-structural recursion**: supply §0 and §1.\n"
+"\n"
+"§2 is powerful enough to discharge most arithmetic termination obligations.\n"
+"You'll see this pattern again in World 4."
+msgstr "You've hit the termination wall — and climbed it!\n"
+"\n"
+"- **Structural recursion**: Lean accepts it for free (lists, trees).\n"
+"- **Non-structural recursion**: supply §0 and §1.\n"
+"\n"
+"§2 is powerful enough to discharge most arithmetic termination obligations.\n"
+"You'll see this pattern again in World 4."
+
+#: Game.Levels.AutomationPower.L07_FilterMap
+msgid "Filter-Map Fusion"
+msgstr "Filter-Map Fusion"
+
+#. §0: `intro n`
+#: Game.Levels.FirstProofs.L01_Double
+msgid "Start with §0 to bring the variable into scope."
+msgstr "Start with §0 to bring the variable into scope."
+
+#: Game.Levels.ProofsInTypes.L03_Fin
+msgid "Fin n: Bounded Naturals"
+msgstr "Fin n: Bounded Naturals"
+
+#. §0: `simp_all [bstMember]`
+#. §1: `ihl`
+#. §2: `simp [h, ...]`
+#. §3: `simp_all`
+#. §4: `¬(x < y)`
+#. §5: `y ≤ x`
+#. §6: `simp [h]`
+#. §7: `if_neg h`
+#. §8: `simp_all`
+#. §9: `simp [explicit_hints]`
+#: Game.Levels.AutomationPower.L06_GrindBST
+msgid "§0 in the first branch found the induction hypothesis §1\n"
+"without being told — it scanned the context and used it. That's one fewer explicit hint.\n"
+"\n"
+"The negation branches still use §2 because §3 normalizes\n"
+"§4 to §5, which can confuse the if-then-else reduction. Plain §6\n"
+"uses the hypothesis as-is, applying §7 directly.\n"
+"\n"
+"**Takeaway**: §8 is a powerful default, but knowing when to fall back to\n"
+"§9 is part of mastering Lean automation."
+msgstr "§0 in the first branch found the induction hypothesis §1\n"
+"without being told — it scanned the context and used it. That's one fewer explicit hint.\n"
+"\n"
+"The negation branches still use §2 because §3 normalizes\n"
+"§4 to §5, which can confuse the if-then-else reduction. Plain §6\n"
+"uses the hypothesis as-is, applying §7 directly.\n"
+"\n"
+"**Takeaway**: §8 is a powerful default, but knowing when to fall back to\n"
+"§9 is part of mastering Lean automation."
+
+#. §0: `Nat`
+#: Game.Levels.ProofsInTypes.L07_InsertSorted
+msgid "Insert a §0 into a sorted list, preserving order."
+msgstr "Insert a §0 into a sorted list, preserving order."
+
+#. §0: `rfl`
+#: Game.Levels.ProofsInTypes.L04_SafeHead
+msgid "The definition reduces definitionally. Try §0."
+msgstr "The definition reduces definitionally. Try §0."
+
+#. §0: `l`
+#. §1: `cons`
+#. §2: `by_cases hxy : x ≤ y`
+#. §3: `simp only [if_pos hxy]`
+#. §4: `simp only [if_neg hxy]`
+#. §5: `simp [Sorted]`
+#: Game.Levels.ProofsInTypes.L07_InsertSorted
+msgid "Induct on §0. For the §1 case, use §2.\n"
+"Then §3 or §4 to reduce the conditional,\n"
+"and §5 to unfold the predicate."
+msgstr "Induct on §0. For the §1 case, use §2.\n"
+"Then §3 or §4 to reduce the conditional,\n"
+"and §5 to unfold the predicate."
+
+#: Game.Levels.PrePost.L01_Stub
+msgid "This world is under construction.\n"
+"\n"
+"**World 6: Pre/Post Conditions** will teach Hoare-style reasoning: specifying\n"
+"what a function *requires* (preconditions) and *guarantees* (postconditions),\n"
+"then proving it meets its contract.\n"
+"\n"
+"Check back soon!"
+msgstr "This world is under construction.\n"
+"\n"
+"**World 6: Pre/Post Conditions** will teach Hoare-style reasoning: specifying\n"
+"what a function *requires* (preconditions) and *guarantees* (postconditions),\n"
+"then proving it meets its contract.\n"
+"\n"
+"Check back soon!"
+
+#. §0: `Sorted`
+#. §1: ```lean
+#. structure SortedList where
+#.   data   : List Nat
+#.   sorted : Sorted data
+#. ```
+#. §2: `SortedList`
+#. §3: ```lean
+#. -- This is a type error — Sorted [3, 1, 2] requires 3 ≤ 1, which omega refutes
+#. -- example : SortedList := ⟨[3, 1, 2], by simp [Sorted]; omega⟩
+#. ```
+#. §4: `List Nat + a separate boolean check`
+#. §5: `SortedList`
+#. §6: `trivial`
+#. §7: `Sorted []`
+#. §8: `Sorted []`
+#. §9: `True`
+#: Game.Levels.ProofsInTypes.L06_SortedList
+msgid "We can pack the §0 proof directly into a structure:\n"
+"\n"
+"§1\n"
+"\n"
+"Now it is **impossible** to create an unsorted §2:\n"
+"\n"
+"§3\n"
+"\n"
+"Compare to §4: the check might be bypassed,\n"
+"forgotten, or tested only in some code paths. With §5, there is **no bypass**.\n"
+"\n"
+"The empty sorted list is constructed with §6 for the §7 proof,\n"
+"since §8 unfolds to §9."
+msgstr "We can pack the §0 proof directly into a structure:\n"
+"\n"
+"§1\n"
+"\n"
+"Now it is **impossible** to create an unsorted §2:\n"
+"\n"
+"§3\n"
+"\n"
+"Compare to §4: the check might be bypassed,\n"
+"forgotten, or tested only in some code paths. With §5, there is **no bypass**.\n"
+"\n"
+"The empty sorted list is constructed with §6 for the §7 proof,\n"
+"since §8 unfolds to §9."
+
+#. §0: `intro a`
+#. §1: `simp [myGcd]`
+#: Game.Levels.FirstProofs.L04_GcdBase
+msgid "Try §0 then §1."
+msgstr "Try §0 then §1."
+
+#. §0: `cases b`
+#. §1: `b = 0`
+#. §2: `h : 0 ≠ 0`
+#. §3: `omega`
+#. §4: `b = b' + 1`
+#. §5: `simp [myGcd]`
+#. §6: `myGcd (b'+1) (a % (b'+1)) = myGcd (b'+1) (a % (b'+1))`
+#. §7: `gcd_base`
+#: Game.Levels.FirstProofs.L05_GcdStep
+msgid "§0 split the proof into two cases:\n"
+"- §1: contradicts §2, closed by §3.\n"
+"- §4: §5 applied the second equation of the definition,\n"
+"  giving §6.\n"
+"\n"
+"Together with §7, you have now verified **both equations** of the\n"
+"Euclidean algorithm!"
+msgstr "§0 split the proof into two cases:\n"
+"- §1: contradicts §2, closed by §3.\n"
+"- §4: §5 applied the second equation of the definition,\n"
+"  giving §6.\n"
+"\n"
+"Together with §7, you have now verified **both equations** of the\n"
+"Euclidean algorithm!"
+
+#. §0: `Fin n`
+#. §1: `exact i.isLt`
+#: Game.Levels.ProofsInTypes.L03_Fin
+msgid "Every §0 carries a proof field. Can you name it? Try §1."
+msgstr "Every §0 carries a proof field. Can you name it? Try §1."
+
+#. §0: `b = b' + 1`
+#. §1: `simp [myGcd]`
+#: Game.Levels.FirstProofs.L05_GcdStep
+msgid "Now §0. Try §1 to apply the recursive equation."
+msgstr "Now §0. Try §1 to apply the recursive equation."
+
+#. §0: `simp`
+#: Game.Levels.FirstProofs.L03_ListLength
+msgid "The empty list case: §0 handles it."
+msgstr "The empty list case: §0 handles it."
+
+#. §0: `foldr`
+#. §1: `[]`
+#. §2: `::`
+#. §3: ```lean
+#. def myFoldr {α β : Type} (f : α → β → β) (init : β) : List α → β
+#.   | []      => init
+#.   | x :: xs => f x (myFoldr f init xs)
+#. ```
+#. §4: `myFoldr (· + ·) 0 [1, 2, 3] = 1 + (2 + (3 + 0)) = 6`
+#. §5: `(· :: ·)`
+#. §6: `[]`
+#. §7: `myFoldr (· :: ·) [] [1, 2, 3] = 1 :: (2 :: (3 :: [])) = [1, 2, 3]`
+#: Game.Levels.PurePrograms.L03_MyFoldr
+msgid "§0 is the most general list combinator — it replaces §1 with an initial value\n"
+"and §2 with a binary function.\n"
+"\n"
+"§3\n"
+"\n"
+"For example, §4.\n"
+"\n"
+"**Key insight**: if you fold with §5 and §6, you reconstruct the original list!\n"
+"\n"
+"§7\n"
+"\n"
+"**Your goal**: prove this identity law formally."
+msgstr "§0 is the most general list combinator — it replaces §1 with an initial value\n"
+"and §2 with a binary function.\n"
+"\n"
+"§3\n"
+"\n"
+"For example, §4.\n"
+"\n"
+"**Key insight**: if you fold with §5 and §6, you reconstruct the original list!\n"
+"\n"
+"§7\n"
+"\n"
+"**Your goal**: prove this identity law formally."
+
+#: Game.Levels.PurePrograms
+msgid "Pure Programs"
+msgstr "Pure Programs"
+
+#. §0: `double n = n + n`
+#. §1: `n`
+#: Game.Levels.FirstProofs.L01_Double
+msgid "§0 for all §1."
+msgstr "§0 for all §1."
+
+#: Game.Levels.ProofsInTypes.L06_SortedList
+msgid "The empty sorted list."
+msgstr "The empty sorted list."
+
+#. §0: `myMap`
+#. §1: `myFilter`
+#. §2: `myFoldr`
+#. §3: `half`
+#. §4: `Tree`
+#. §5: `treeHeight`
+#. §6: `bstInsert`
+#. §7: `bstMember`
+#. §8: `Expr`
+#. §9: `eval`
+#: Game.Levels.PurePrograms.L07_Expr
+msgid "World 2 complete! You've built and verified:\n"
+"- **§0**, **§1**, **§2** — the classic list combinators\n"
+"- **§3** — a non-structural recursion with explicit termination proof\n"
+"- **§4** and **§5** — your own inductive type\n"
+"- **§6/§7** — BST insert-then-search correctness\n"
+"- **§8/§9** — a verified expression evaluator\n"
+"\n"
+"Onward to World 3: Subtypes!"
+msgstr "World 2 complete! You've built and verified:\n"
+"- **§0**, **§1**, **§2** — the classic list combinators\n"
+"- **§3** — a non-structural recursion with explicit termination proof\n"
+"- **§4** and **§5** — your own inductive type\n"
+"- **§6/§7** — BST insert-then-search correctness\n"
+"- **§8/§9** — a verified expression evaluator\n"
+"\n"
+"Onward to World 3: Subtypes!"
+
+#. §0: `double_even n`
+#. §1: `⟨n + n, double_even n⟩ : EvenNat`
+#: Game.Levels.ProofsInTypes.L01_Subtype
+msgid "The proof is the membership certificate. No certificate, no value.\n"
+"\n"
+"§0 is the proof we'd pack into §1."
+msgstr "The proof is the membership certificate. No certificate, no value.\n"
+"\n"
+"§0 is the proof we'd pack into §1."
+
+#. §0: `@[simp]`
+#. §1: `simp_all`
+#. §2: `myMap_nil`
+#. §3: `myMap_cons`
+#. §4: `@[simp]`
+#: Game.Levels.AutomationPower.L04_MapAppend
+msgid "One line. The §0 investment in Level 2 pays off here.\n"
+"\n"
+"§1 sees §2 and §3 in the simp set, uses\n"
+"the induction hypothesis from the context, and closes both cases.\n"
+"\n"
+"This is the power of §4: tag your equations once, benefit everywhere."
+msgstr "One line. The §0 investment in Level 2 pays off here.\n"
+"\n"
+"§1 sees §2 and §3 in the simp set, uses\n"
+"the induction hypothesis from the context, and closes both cases.\n"
+"\n"
+"This is the power of §4: tag your equations once, benefit everywhere."
+
+#: Game.Levels.DataInvariants.L01_Stub
+msgid "This world is under construction.\n"
+"\n"
+"**World 5: Data Invariants** will teach you to maintain invariants over data\n"
+"structures: sorted lists, balanced trees, and how to carry proofs alongside\n"
+"data so that invariants can never be violated.\n"
+"\n"
+"Check back soon!"
+msgstr "This world is under construction.\n"
+"\n"
+"**World 5: Data Invariants** will teach you to maintain invariants over data\n"
+"structures: sorted lists, balanced trees, and how to carry proofs alongside\n"
+"data so that invariants can never be violated.\n"
+"\n"
+"Check back soon!"
+
+#: Game.Levels.ProofsInTypes.L08_Victory
+msgid "Victory: The Proof-Carrying Insert"
+msgstr "Victory: The Proof-Carrying Insert"
+
+#: Game.Levels.PurePrograms.L03_MyFoldr
+msgid "Folding a List"
+msgstr "Folding a List"
+
+#: Game.Levels.PurePrograms.L06_BST
+msgid "Insert a value into a BST."
+msgstr "Insert a value into a BST."
+
+#. §0: `Nat`
+#. §1: `SortedList`
+#. §2: `SortedList`
+#: Game.Levels.ProofsInTypes.L08_Victory
+msgid "Insert a §0 into a §1, returning a §2."
+msgstr "Insert a §0 into a §1, returning a §2."
+
+#. §0: `.val`
+#. §1: `.1`
+#. §2: `.property`
+#. §3: `.2`
+#. §4: `e : EvenNat`
+#. §5: `e.val : Nat`
+#. §6: `e.property : e.val % 2 = 0`
+#. §7: `EvenNat`
+#: Game.Levels.ProofsInTypes.L02_SubtypeAccess
+msgid "Every subtype value carries two pieces:\n"
+"- §0 (or §1): the underlying value\n"
+"- §2 (or §3): the proof\n"
+"\n"
+"For §4:\n"
+"- §5 — the number itself\n"
+"- §6 — the proof it's even\n"
+"\n"
+"The type system **guarantees** this proof exists. You cannot construct an §7 without\n"
+"providing a proof of evenness."
+msgstr "Every subtype value carries two pieces:\n"
+"- §0 (or §1): the underlying value\n"
+"- §2 (or §3): the proof\n"
+"\n"
+"For §4:\n"
+"- §5 — the number itself\n"
+"- §6 — the proof it's even\n"
+"\n"
+"The type system **guarantees** this proof exists. You cannot construct an §7 without\n"
+"providing a proof of evenness."
+
+#. §0: `grind [double]`
+#. §1: `grind`
+#. §2: `grind [def1, lemma2, ...]`
+#. §3: `[double]`
+#. §4: `grind`
+#: Game.Levels.AutomationPower.L03_Grind
+msgid "§0 unfolded the definition, rewrote the hypothesis, and\n"
+"closed the goal with linear arithmetic — all in one call.\n"
+"\n"
+"When §1 needs a push, you can give it more lemma hints:\n"
+"§2. Here, §3 was enough.\n"
+"\n"
+"§4 is particularly useful when you have hypotheses relating\n"
+"computed values and need to derive new equalities or inequalities."
+msgstr "§0 unfolded the definition, rewrote the hypothesis, and\n"
+"closed the goal with linear arithmetic — all in one call.\n"
+"\n"
+"When §1 needs a push, you can give it more lemma hints:\n"
+"§2. Here, §3 was enough.\n"
+"\n"
+"§4 is particularly useful when you have hypotheses relating\n"
+"computed values and need to derive new equalities or inequalities."
+
+#: Game.Levels.PurePrograms.L07_Expr
+msgid "Abstract syntax tree for arithmetic expressions."
+msgstr "Abstract syntax tree for arithmetic expressions."
+
+#: Game.Levels.Termination.L01_Stub
+#: Game.Levels.DataInvariants.L01_Stub
+#: Game.Levels.PrePost.L01_Stub
+#: Game.Levels.ImperativeIntro.L01_Stub
+#: Game.Levels.ImperativeBoss.L01_Stub
+msgid "Coming Soon"
+msgstr "Coming Soon"
+
+#: Game.Levels.AutomationPower.L01_SimpAll
+msgid "simp_all: Turbo-Charged Simplification"
+msgstr "simp_all: Turbo-Charged Simplification"
+
+#. §0: ```lean
+#. inductive Tree (α : Type) where
+#.   | leaf : Tree α
+#.   | node : Tree α → α → Tree α → Tree α
+#. ```
+#. §1: `Tree α`
+#. §2: `leaf`
+#. §3: `node`
+#. §4: ```lean
+#. def treeHeight : Tree α → Nat
+#.   | .leaf       => 0
+#.   | .node l _ r => 1 + max (treeHeight l) (treeHeight r)
+#. ```
+#. §5: `treeHeight`
+#. §6: `Tree α`
+#. §7: `termination_by`
+#. §8: `node`
+#: Game.Levels.PurePrograms.L05_Tree
+msgid "Lists are one-dimensional. **Binary trees** branch in two directions:\n"
+"\n"
+"§0\n"
+"\n"
+"A §1 is either a §2 (empty) or a §3 with a left subtree, a value, and a right subtree.\n"
+"\n"
+"We can measure a tree's height recursively:\n"
+"\n"
+"§4\n"
+"\n"
+"Note: §5 is **structurally recursive** on §6, so Lean accepts it without\n"
+"any §7 annotation.\n"
+"\n"
+"**Your goal**: prove that any non-empty tree (built with §8) has height ≥ 1."
+msgstr "Lists are one-dimensional. **Binary trees** branch in two directions:\n"
+"\n"
+"§0\n"
+"\n"
+"A §1 is either a §2 (empty) or a §3 with a left subtree, a value, and a right subtree.\n"
+"\n"
+"We can measure a tree's height recursively:\n"
+"\n"
+"§4\n"
+"\n"
+"Note: §5 is **structurally recursive** on §6, so Lean accepts it without\n"
+"any §7 annotation.\n"
+"\n"
+"**Your goal**: prove that any non-empty tree (built with §8) has height ≥ 1."
+
+#: Game.Levels.PurePrograms.L04_Half
+msgid "The Termination Wall"
+msgstr "The Termination Wall"
+
+#: Game.Levels.AutomationPower.L06_GrindBST
+msgid "Test whether a value is a member of a binary search tree."
+msgstr "Test whether a value is a member of a binary search tree."
+
+#. §0: `simp [isEven, double]`
+#. §1: `(n + n) % 2 = 0`
+#. §2: `omega`
+#. §3: `omega`
+#: Game.Levels.FirstProofs.L02_IsEven
+msgid "§0 unfolded both definitions, turning the goal into\n"
+"§1. Then §2 — Lean's built-in linear arithmetic solver —\n"
+"finished the proof automatically.\n"
+"\n"
+"§3 is incredibly powerful: it can prove any goal that follows from linear\n"
+"arithmetic over integers and natural numbers."
+msgstr "§0 unfolded both definitions, turning the goal into\n"
+"§1. Then §2 — Lean's built-in linear arithmetic solver —\n"
+"finished the proof automatically.\n"
+"\n"
+"§3 is incredibly powerful: it can prove any goal that follows from linear\n"
+"arithmetic over integers and natural numbers."
+
+#: Game.Levels.ProofsInTypes.L02_SubtypeAccess
+msgid "Extracting the Packed Proof"
+msgstr "Extracting the Packed Proof"
+
+#. §0: `simp_all`
+#. §1: `[ih]`
+#. §2: `<;>`
+#. §3: `induction xs <;> tac`
+#. §4: `tac`
+#. §5: `simp_all`
+#: Game.Levels.AutomationPower.L01_SimpAll
+msgid "§0 found the induction hypothesis in the context and used it\n"
+"automatically — no §1 needed.\n"
+"\n"
+"The §2 combinator is powerful: §3 applies §4 to\n"
+"**both** the base case and the inductive case. Combined with §5, a\n"
+"5-line induction proof collapses to one line."
+msgstr "§0 found the induction hypothesis in the context and used it\n"
+"automatically — no §1 needed.\n"
+"\n"
+"The §2 combinator is powerful: §3 applies §4 to\n"
+"**both** the base case and the inductive case. Combined with §5, a\n"
+"5-line induction proof collapses to one line."
+
+#. §0: `simp`
+#. §1: `@[simp]`
+#. §2: `@[simp]`
+#. §3: `simp`
+#. §4: `simp_all`
+#. §5: `simp [myMap]`
+#. §6: `myMap`
+#. §7: ```lean
+#. @[simp] theorem myMap_nil (f : α → β) :
+#.     myMap f [] = [] := rfl
+#. 
+#. @[simp] theorem myMap_cons (f : α → β) (x : α) (xs : List α) :
+#.     myMap f (x :: xs) = f x :: myMap f xs := rfl
+#. ```
+#. §8: `rfl`
+#. §9: `myMap`
+#. §10: `simp`
+#. §11: `myMap`
+#. §12: `myMap`
+#. §13: `myMap g (myMap f l) = myMap (g ∘ f) l`
+#. §14: `f`
+#. §15: `g`
+#. §16: `induction l <;> simp_all [Function.comp_apply]`
+#: Game.Levels.AutomationPower.L02_SimpAttr
+msgid "§0 has a built-in library of rewrite rules. You can extend it permanently\n"
+"by tagging your own theorems with the **§1 attribute**.\n"
+"\n"
+"After marking a theorem §2, plain §3 (and §4) uses it\n"
+"automatically — you never need to write §5 again.\n"
+"\n"
+"The equation lemmas of §6 make great simp rules:\n"
+"§7\n"
+"\n"
+"Both are proved by §8 because they follow directly from §9's definition.\n"
+"\n"
+"With these in place, §10 knows how §11 behaves on every list shape.\n"
+"Now prove a brand-new theorem: **§12 respects function composition**.\n"
+"\n"
+"§13\n"
+"\n"
+"Mapping §14 then §15 is the same as mapping their composition in one pass.\n"
+"Try §16."
+msgstr "§0 has a built-in library of rewrite rules. You can extend it permanently\n"
+"by tagging your own theorems with the **§1 attribute**.\n"
+"\n"
+"After marking a theorem §2, plain §3 (and §4) uses it\n"
+"automatically — you never need to write §5 again.\n"
+"\n"
+"The equation lemmas of §6 make great simp rules:\n"
+"§7\n"
+"\n"
+"Both are proved by §8 because they follow directly from §9's definition.\n"
+"\n"
+"With these in place, §10 knows how §11 behaves on every list shape.\n"
+"Now prove a brand-new theorem: **§12 respects function composition**.\n"
+"\n"
+"§13\n"
+"\n"
+"Mapping §14 then §15 is the same as mapping their composition in one pass.\n"
+"Try §16."
+
+#: Game.Levels.PurePrograms.L05_Tree
+msgid "Binary tree type: either a leaf or a node with left subtree, value, right subtree."
+msgstr "Binary tree type: either a leaf or a node with left subtree, value, right subtree."
+
+#. §0: `intro a b`
+#. §1: `constructor`
+#. §2: `↔`
+#: Game.Levels.FirstProofs.L06_Coprime
+msgid "Use §0, then §1 to split the §2."
+msgstr "Use §0, then §1 to split the §2."
+
+#. §0: `(n + n) % 2 = 0`
+#. §1: `n`
+#: Game.Levels.ProofsInTypes.L01_Subtype
+msgid "§0 for all §1"
+msgstr "§0 for all §1"
+
+#. §0: `induction l <;> simp_all [Function.comp_apply]`
+#. §1: `Function.comp_apply`
+#. §2: `(f ∘ g) x = f (g x)`
+#. §3: `@[simp]`
+#. §4: `myMap`
+#: Game.Levels.AutomationPower.L02_SimpAttr
+msgid "Use §0.\n"
+"§1 is the lemma §2.\n"
+"The §3 lemmas for §4 and the induction hypothesis do the rest."
+msgstr "Use §0.\n"
+"§1 is the lemma §2.\n"
+"The §3 lemmas for §4 and the induction hypothesis do the rest."
+
+#: Game.Levels.PurePrograms.L02_MyFilter
+msgid "Keep only elements satisfying a boolean predicate."
+msgstr "Keep only elements satisfying a boolean predicate."
+
+#: Game
+msgid "# Welcome to the Program Verification Game!\n"
+"\n"
+"In this game you will learn **formal program verification** — the art of\n"
+"proving mathematical theorems about programs to guarantee they are correct.\n"
+"\n"
+"You will use **Lean 4**, a proof assistant that checks every step of your reasoning.\n"
+"\n"
+"## The 8 Worlds\n"
+"\n"
+"| # | World | Theme |\n"
+"|---|-------|-------|\n"
+"| 1 | **First Proofs** | Core tactics, GCD algorithm, primality |\n"
+"| 2 | **Pure Programs** | Pure recursive programs + termination |\n"
+"| 3 | **Automation Power** | simp_all, grind, and @[simp] |\n"
+"| 4 | **Proofs in Types** | Subtypes, Fin, proof-carrying functions |\n"
+"| 5 | **Termination** | Proving programs always terminate |\n"
+"| 6 | **Data Invariants** | Sorted lists, balanced trees, invariant maintenance |\n"
+"| 7 | **Pre/Post Conditions** | Hoare-style contracts |\n"
+"| 8 | **Imperative Intro** | Verifying mutable state and loops |\n"
+"\n"
+"Start with **World 1** to learn the basics!"
+msgstr "# Welcome to the Program Verification Game!\n"
+"\n"
+"In this game you will learn **formal program verification** — the art of\n"
+"proving mathematical theorems about programs to guarantee they are correct.\n"
+"\n"
+"You will use **Lean 4**, a proof assistant that checks every step of your reasoning.\n"
+"\n"
+"## The 8 Worlds\n"
+"\n"
+"| # | World | Theme |\n"
+"|---|-------|-------|\n"
+"| 1 | **First Proofs** | Core tactics, GCD algorithm, primality |\n"
+"| 2 | **Pure Programs** | Pure recursive programs + termination |\n"
+"| 3 | **Automation Power** | simp_all, grind, and @[simp] |\n"
+"| 4 | **Proofs in Types** | Subtypes, Fin, proof-carrying functions |\n"
+"| 5 | **Termination** | Proving programs always terminate |\n"
+"| 6 | **Data Invariants** | Sorted lists, balanced trees, invariant maintenance |\n"
+"| 7 | **Pre/Post Conditions** | Hoare-style contracts |\n"
+"| 8 | **Imperative Intro** | Verifying mutable state and loops |\n"
+"\n"
+"Start with **World 1** to learn the basics!"
+
+#: Game.Levels.ImperativeBoss
+msgid "Imperative Boss"
+msgstr "Imperative Boss"
+
+#. §0: `simp ... at h`
+#: Game.Levels.ProofsInTypes.L05_Sorted
+msgid "§0 is the variant that simplifies *hypotheses* rather than the goal.\n"
+"It's essential when you need to unfold a definition to extract information from an assumption."
+msgstr "§0 is the variant that simplifies *hypotheses* rather than the goal.\n"
+"It's essential when you need to unfold a definition to extract information from an assumption."
+
+#. §0: `simp [h1, h2, bstMember, ihl]`
+#. §1: `simp_all`
+#. §2: `simp_all`
+#. §3: `h : x < y`
+#. §4: `ihl`
+#. §5: `ihr`
+#. §6: `h : ¬(x < y)`
+#. §7: `simp_all`
+#. §8: `h : y ≤ x`
+#. §9: `if x < y then ... else ...`
+#. §10: `simp [h, ...]`
+#. §11: ```lean
+#. by_cases h1 : x < y
+#. · simp [h1, bstMember, ihl]        -- explicit ihl needed
+#. · by_cases h2 : y < x
+#.   · simp [h1, h2, bstMember, ihr]  -- explicit ihr needed
+#.   · simp [h1, h2, bstMember]
+#. ```
+#. §12: `simp_all`
+#. §13: ```lean
+#. by_cases h1 : x < y
+#. · simp_all [bstMember]           -- finds ihl automatically ✓
+#. · by_cases h2 : y < x
+#.   · simp [bstMember, h1, h2, ihr]
+#.   · simp [bstMember, h1, h2]
+#. ```
+#. §14: `simp_all`
+#. §15: `ihl`
+#. §16: `simp`
+#: Game.Levels.AutomationPower.L06_GrindBST
+msgid "In World 2, you proved BST correctness with explicit §0 calls.\n"
+"§1 can improve this — but with a catch.\n"
+"\n"
+"**The key insight**: §2 works best with *positive* hypotheses like §3.\n"
+"It can search the context for §4 and §5 automatically. However, when you have\n"
+"§6, §7 normalizes it to §8, which prevents the standard\n"
+"§9 reduction. For those branches, plain §10 is safer.\n"
+"\n"
+"**World 2 proof**:\n"
+"§11\n"
+"\n"
+"**World 3 proof** — §12 handles the positive branch automatically:\n"
+"§13\n"
+"\n"
+"The first branch is now cleaner. The §14 found §15 in the context without\n"
+"being told. The other branches still use §16 with explicit hints."
+msgstr "In World 2, you proved BST correctness with explicit §0 calls.\n"
+"§1 can improve this — but with a catch.\n"
+"\n"
+"**The key insight**: §2 works best with *positive* hypotheses like §3.\n"
+"It can search the context for §4 and §5 automatically. However, when you have\n"
+"§6, §7 normalizes it to §8, which prevents the standard\n"
+"§9 reduction. For those branches, plain §10 is safer.\n"
+"\n"
+"**World 2 proof**:\n"
+"§11\n"
+"\n"
+"**World 3 proof** — §12 handles the positive branch automatically:\n"
+"§13\n"
+"\n"
+"The first branch is now cleaner. The §14 found §15 in the context without\n"
+"being told. The other branches still use §16 with explicit hints."
+
+#: Game.Levels.FirstProofs.L06_Coprime
+msgid "Coprime Numbers"
+msgstr "Coprime Numbers"
+
+#: Game.Levels.PrePost
+msgid "**World 6: Pre/Post Conditions**\n"
+"\n"
+"Hoare-style reasoning: specify what a function *requires* (preconditions)\n"
+"and *guarantees* (postconditions), then prove the implementation satisfies\n"
+"its contract. The foundation of formal program verification.\n"
+"\n"
+"*Coming soon!*"
+msgstr "**World 6: Pre/Post Conditions**\n"
+"\n"
+"Hoare-style reasoning: specify what a function *requires* (preconditions)\n"
+"and *guarantees* (postconditions), then prove the implementation satisfies\n"
+"its contract. The foundation of formal program verification.\n"
+"\n"
+"*Coming soon!*"
+
+#: Game.Levels.ProofsInTypes.L06_SortedList
+msgid "SortedList: A Type That IS Its Invariant"
+msgstr "SortedList: A Type That IS Its Invariant"
+
+#. §0: `induction t`
+#. §1: `leaf`
+#. §2: `simp [bstInsert, bstMember]`
+#. §3: `node l y r ihl ihr`
+#. §4: `simp only [bstInsert]`
+#. §5: `by_cases h1 : x < y`
+#. §6: `h1 : x < y`
+#. §7: `simp_all [bstMember]`
+#. §8: `h1 : ¬(x < y)`
+#. §9: `by_cases h2 : y < x`
+#. §10: `simp [bstMember, h1, h2, ...]`
+#: Game.Levels.AutomationPower.L06_GrindBST
+msgid "Use §0. For §1, §2 closes it.\n"
+"For §3: §4, then §5.\n"
+"- If §6: §7 finds the IH automatically.\n"
+"- If §8: use a second §9 and §10."
+msgstr "Use §0. For §1, §2 closes it.\n"
+"For §3: §4, then §5.\n"
+"- If §6: §7 finds the IH automatically.\n"
+"- If §8: use a second §9 and §10."
+
+#. §0: `@[simp]`
+#. §1: `myFilter`
+#. §2: ```lean
+#. @[simp] theorem myFilter_nil (p : α → Bool) :
+#.     myFilter p [] = [] := rfl
+#. 
+#. @[simp] theorem myFilter_cons (p : α → Bool) (x : α) (xs : List α) :
+#.     myFilter p (x :: xs) =
+#.       if p x then x :: myFilter p xs else myFilter p xs := rfl
+#. ```
+#. §3: `p`
+#. §4: `!p`
+#. §5: ```lean
+#. (myFilter p l).length + (myFilter (fun x => !p x) l).length = l.length
+#. ```
+#. §6: `p`
+#. §7: `!p`
+#. §8: `l`
+#. §9: `cons`
+#. §10: `p x`
+#. §11: `cases h : p x`
+#. §12: `simp_all`
+#. §13: `h`
+#. §14: `omega`
+#: Game.Levels.AutomationPower.L05_FilterPartition
+msgid "Let's do the same §0 treatment for §1, then prove a\n"
+"new theorem about it.\n"
+"\n"
+"§2\n"
+"\n"
+"Now the theorem: filtering a list with a predicate §3 and filtering with\n"
+"its complement §4 together account for **every element**:\n"
+"§5\n"
+"\n"
+"Each element goes into exactly one bucket — either §6 kept it or §7 did.\n"
+"\n"
+"The proof strategy:\n"
+"- Induct on §8\n"
+"- For the §9 case, case-split on §10 with §11\n"
+"- §12 handles the filter simplification using §13\n"
+"- §14 closes the arithmetic"
+msgstr "Let's do the same §0 treatment for §1, then prove a\n"
+"new theorem about it.\n"
+"\n"
+"§2\n"
+"\n"
+"Now the theorem: filtering a list with a predicate §3 and filtering with\n"
+"its complement §4 together account for **every element**:\n"
+"§5\n"
+"\n"
+"Each element goes into exactly one bucket — either §6 kept it or §7 did.\n"
+"\n"
+"The proof strategy:\n"
+"- Induct on §8\n"
+"- For the §9 case, case-split on §10 with §11\n"
+"- §12 handles the filter simplification using §13\n"
+"- §14 closes the arithmetic"
+
+#. §0: `myGcd`
+#. §1: `n`
+#. §2: `n ≥ 2`
+#. §3: `d`
+#. §4: `[2, n-1]`
+#. §5: `n`
+#. §6: ```
+#. def isPrime (n : Nat) : Bool :=
+#.   n ≥ 2 &&
+#.   ((List.range n).drop 2).all (fun d => myGcd n d == 1)
+#. ```
+#. §7: ```
+#. isPrime 2 = true ∧ isPrime 3 = true ∧ isPrime 4 = false ∧ isPrime 5 = true
+#. ```
+#. §8: `native_decide`
+#: Game.Levels.FirstProofs.L07_Primality
+msgid "You've built and verified the Euclidean algorithm. Now use it to verify\n"
+"a **primality checker** built from §0!\n"
+"\n"
+"A number §1 is prime if §2 and every number §3 in §4\n"
+"is coprime with §5:\n"
+"§6\n"
+"\n"
+"Prove that 2, 3, and 5 are prime, and that 4 is not:\n"
+"§7\n"
+"\n"
+"*Tip*: All four values are **computable** — try §8 to evaluate them instantly."
+msgstr "You've built and verified the Euclidean algorithm. Now use it to verify\n"
+"a **primality checker** built from §0!\n"
+"\n"
+"A number §1 is prime if §2 and every number §3 in §4\n"
+"is coprime with §5:\n"
+"§6\n"
+"\n"
+"Prove that 2, 3, and 5 are prime, and that 4 is not:\n"
+"§7\n"
+"\n"
+"*Tip*: All four values are **computable** — try §8 to evaluate them instantly."
+
+#. §0: `half 0 = 0`
+#. §1: `half 1 = 0`
+#. §2: `n ≥ 2`
+#. §3: `n - 2 < n`
+#: Game.Levels.PurePrograms.L04_Half
+msgid "§0, §1, and when §2, §3."
+msgstr "§0, §1, and when §2, §3."
+
+#: Game
+#: Game
+msgid "Program Verification Game"
+msgstr "Program Verification Game"
+
+#. §0: `SortedList`
+#. §1: ```lean
+#. def insertSorted (x : Nat) : List Nat → List Nat
+#.   | []      => [x]
+#.   | y :: ys => if x ≤ y then x :: y :: ys else y :: insertSorted x ys
+#. ```
+#. §2: `insertSorted`
+#. §3: `x ≤ y`
+#. §4: `by_cases hxy : x ≤ y`
+#. §5: `simp only [if_pos hxy]`
+#. §6: `simp only [if_neg hxy]`
+#. §7: `simp [Sorted]`
+#: Game.Levels.ProofsInTypes.L07_InsertSorted
+msgid "Having a §0 type is only useful if we can **build** sorted lists.\n"
+"Here is a function that inserts an element into a sorted list, keeping it sorted:\n"
+"\n"
+"§1\n"
+"\n"
+"We need to prove that §2 **preserves** sortedness. The proof goes by\n"
+"induction on the list. At each step we case-split on whether §3.\n"
+"\n"
+"Key tactics:\n"
+"- §4 — split into two cases\n"
+"- §5 / §6 — reduce the conditional\n"
+"- §7 — unfold the predicate and close the goal"
+msgstr "Having a §0 type is only useful if we can **build** sorted lists.\n"
+"Here is a function that inserts an element into a sorted list, keeping it sorted:\n"
+"\n"
+"§1\n"
+"\n"
+"We need to prove that §2 **preserves** sortedness. The proof goes by\n"
+"induction on the list. At each step we case-split on whether §3.\n"
+"\n"
+"Key tactics:\n"
+"- §4 — split into two cases\n"
+"- §5 / §6 — reduce the conditional\n"
+"- §7 — unfold the predicate and close the goal"
+
+#: GameServer.RpcHandlers
+msgid "level completed! 🎉"
+msgstr "level completed! 🎉"
+
+#. §0: `[]`
+#. §1: `([] ++ ys).length = ys.length = 0 + ys.length`
+#. §2: `x :: xs`
+#. §3: `ih`
+#: Game.Levels.FirstProofs.L03_ListLength
+msgid "You proved a fundamental list theorem by structural induction!\n"
+"\n"
+"The induction had two cases:\n"
+"- **Base case** (§0): §1, trivial.\n"
+"- **Inductive case** (§2): used the induction hypothesis §3 and\n"
+"  Lean's built-in list lemmas to reduce to arithmetic.\n"
+"\n"
+"This is the essence of verification by induction."
+msgstr "You proved a fundamental list theorem by structural induction!\n"
+"\n"
+"The induction had two cases:\n"
+"- **Base case** (§0): §1, trivial.\n"
+"- **Inductive case** (§2): used the induction hypothesis §3 and\n"
+"  Lean's built-in list lemmas to reduce to arithmetic.\n"
+"\n"
+"This is the essence of verification by induction."
+
+#: Game.Levels.PurePrograms.L02_MyFilter
+msgid "Filtering a List"
+msgstr "Filtering a List"
+
+#: Game.Levels.PurePrograms.L04_Half
+msgid "Integer division by 2, defined by well-founded recursion."
+msgstr "Integer division by 2, defined by well-founded recursion."
+
+#. §0: `b = 0`
+#. §1: `h : 0 ≠ 0`
+#. §2: `omega`
+#: Game.Levels.FirstProofs.L05_GcdStep
+msgid "In this case §0 but §1. This is a contradiction — try §2."
+msgstr "In this case §0 but §1. This is a contradiction — try §2."
+
+#: Game.Levels.ProofsInTypes.L04_SafeHead
+msgid "Return the head of a non-empty list, with non-emptiness proved at call site."
+msgstr "Return the head of a non-empty list, with non-emptiness proved at call site."
+
+#. §0: `exact h`
+#. §1: `myCoprime a b`
+#. §2: `myGcd a b = 1`
+#. §3: `constructor`
+#. §4: `P ↔ Q`
+#. §5: `P ∧ Q`
+#: Game.Levels.FirstProofs.L06_Coprime
+msgid "Both directions are proved by §0 — because §1 is\n"
+"**defined as** §2. They are literally the same proposition!\n"
+"\n"
+"§3 is the key tactic for goals of the form §4 (biconditionals)\n"
+"and §5 (conjunctions). It splits them into separate subgoals."
+msgstr "Both directions are proved by §0 — because §1 is\n"
+"**defined as** §2. They are literally the same proposition!\n"
+"\n"
+"§3 is the key tactic for goals of the form §4 (biconditionals)\n"
+"and §5 (conjunctions). It splits them into separate subgoals."
+
+#. §0: `bstMember x (bstInsert x t) = true`
+#. §1: `x`
+#. §2: `t`
+#: Game.Levels.AutomationPower.L06_GrindBST
+msgid "§0 for any §1 and tree §2."
+msgstr "§0 for any §1 and tree §2."
+
+#: Game.Levels.FirstProofs.L02_IsEven
+msgid "Even Numbers"
+msgstr "Even Numbers"
+
+#: Game.Levels.FirstProofs.L04_GcdBase
+msgid "Euclidean GCD algorithm."
+msgstr "Euclidean GCD algorithm."
+
+#. §0: `bstMember x (bstInsert x t) = true`
+#. §1: `x`
+#. §2: `t`
+#: Game.Levels.PurePrograms.L06_BST
+msgid "§0 for all §1 and §2.\n"
+"\n"
+"This is the fundamental correctness property of BSTs: if you insert something,\n"
+"you can always find it. Proving the full BST ordering invariant is left for World 5!"
+msgstr "§0 for all §1 and §2.\n"
+"\n"
+"This is the fundamental correctness property of BSTs: if you insert something,\n"
+"you can always find it. Proving the full BST ordering invariant is left for World 5!"
+
+#: Game.Levels.ProofsInTypes.L01_Subtype
+msgid "Subtypes: A Value With a Proof Inside"
+msgstr "Subtypes: A Value With a Proof Inside"
+
+#: Game.Levels.Termination.L01_Stub
+msgid "This world is under construction.\n"
+"\n"
+"**World 4: Termination** will teach you to prove that programs always terminate:\n"
+"structural recursion, well-founded measures, and how Lean checks that recursive\n"
+"calls decrease toward the base case.\n"
+"\n"
+"Check back soon!"
+msgstr "This world is under construction.\n"
+"\n"
+"**World 4: Termination** will teach you to prove that programs always terminate:\n"
+"structural recursion, well-founded measures, and how Lean checks that recursive\n"
+"calls decrease toward the base case.\n"
+"\n"
+"Check back soon!"
+
+#. §0: ```lean
+#. inductive Expr where
+#.   | num : Int → Expr
+#.   | add : Expr → Expr → Expr
+#.   | mul : Expr → Expr → Expr
+#. 
+#. def eval : Expr → Int
+#.   | .num n     => n
+#.   | .add e1 e2 => eval e1 + eval e2
+#.   | .mul e1 e2 => eval e1 * eval e2
+#. ```
+#. §1: `eval`
+#. §2: `Expr`
+#. §3: `a * (b + c) = a*b + a*c`
+#. §4: `simp [eval]`
+#. §5: `Int`
+#. §6: `Int.mul_add`
+#. §7: `simp [eval, Int.mul_add]`
+#: Game.Levels.PurePrograms.L07_Expr
+msgid "Let's build a tiny **expression language** — the kind at the heart of every compiler\n"
+"and interpreter.\n"
+"\n"
+"§0\n"
+"\n"
+"§1 is structurally recursive on §2, so Lean accepts it automatically.\n"
+"\n"
+"**Your goal**: prove the distributive law — §3 — at the\n"
+"expression level.\n"
+"\n"
+"After §4 unfolds the evaluator, the goal becomes a pure arithmetic\n"
+"identity on §5. Lean knows this as §6, so\n"
+"§7 closes it in one step."
+msgstr "Let's build a tiny **expression language** — the kind at the heart of every compiler\n"
+"and interpreter.\n"
+"\n"
+"§0\n"
+"\n"
+"§1 is structurally recursive on §2, so Lean accepts it automatically.\n"
+"\n"
+"**Your goal**: prove the distributive law — §3 — at the\n"
+"expression level.\n"
+"\n"
+"After §4 unfolds the evaluator, the goal becomes a pure arithmetic\n"
+"identity on §5. Lean knows this as §6, so\n"
+"§7 closes it in one step."
+
+#. §0: `List`
+#. §1: `Tree`
+#. §2: `termination_by`
+#. §3: `decreasing_by`
+#. §4: `myGcd`
+#: Game.Levels.PurePrograms
+msgid "Welcome to **World 2: Pure Programs**!\n"
+"\n"
+"All code here is *pure* — no mutable state, no side effects.\n"
+"But purity doesn't mean simple: you'll build polymorphic list operations,\n"
+"a binary search tree, and a tiny expression evaluator — all verified by Lean.\n"
+"\n"
+"Along the way you'll hit the **termination wall**: Lean demands a proof that\n"
+"every recursive function eventually stops.\n"
+"\n"
+"- **Structural recursion** (on §0, on §1): Lean accepts it automatically.\n"
+"- **Non-structural recursion**: you must supply a measure with §2\n"
+"  and prove it decreases with §3.\n"
+"\n"
+"You already saw this in World 1 with §4. Here you'll see it again — and\n"
+"understand exactly why Lean insists on it."
+msgstr "Welcome to **World 2: Pure Programs**!\n"
+"\n"
+"All code here is *pure* — no mutable state, no side effects.\n"
+"But purity doesn't mean simple: you'll build polymorphic list operations,\n"
+"a binary search tree, and a tiny expression evaluator — all verified by Lean.\n"
+"\n"
+"Along the way you'll hit the **termination wall**: Lean demands a proof that\n"
+"every recursive function eventually stops.\n"
+"\n"
+"- **Structural recursion** (on §0, on §1): Lean accepts it automatically.\n"
+"- **Non-structural recursion**: you must supply a measure with §2\n"
+"  and prove it decreases with §3.\n"
+"\n"
+"You already saw this in World 1 with §4. Here you'll see it again — and\n"
+"understand exactly why Lean insists on it."
+
+#: Game.Levels.DataInvariants
+msgid "Data Invariants"
+msgstr "Data Invariants"
+
+#. §0: `myFilter`
+#. §1: `split`
+#. §2: `if`
+#. §3: `simp_all`
+#. §4: `omega`
+#: Game.Levels.PurePrograms.L02_MyFilter
+msgid "§0 can only shrink (or preserve) a list — it can never grow it.\n"
+"Notice how §1 handled the §2 expression cleanly, letting §3 and §4\n"
+"close each branch."
+msgstr "§0 can only shrink (or preserve) a list — it can never grow it.\n"
+"Notice how §1 handled the §2 expression cleanly, letting §3 and §4\n"
+"close each branch."
+
+#: Game.Levels.ImperativeIntro
+msgid "Imperative Intro"
+msgstr "Imperative Intro"
+
+#: Game.Levels.Termination.L01_Stub
+#: Game.Levels.DataInvariants.L01_Stub
+#: Game.Levels.PrePost.L01_Stub
+#: Game.Levels.ImperativeIntro.L01_Stub
+#: Game.Levels.ImperativeBoss.L01_Stub
+msgid "You found the stub level! The full content is coming soon."
+msgstr "You found the stub level! The full content is coming soon."
+
+#. §0: `x ≤ y`
+#. §1: `insertSorted x (y :: ys) = x :: y :: ys`
+#: Game.Levels.ProofsInTypes.L07_InsertSorted
+#: Game.Levels.ProofsInTypes.L07_InsertSorted
+msgid "When §0: §1"
+msgstr "When §0: §1"
+
+#: Game.Levels.PurePrograms.L05_Tree
+msgid "Height of a binary tree (0 for leaf, 1 + max of children for node)."
+msgstr "Height of a binary tree (0 for leaf, 1 + max of children for node)."
+
+#. §0: `simp_all`
+#. §1: `simp`
+#. §2: `simp_all`
+#. §3: `ih`
+#. §4: `simp [ih]`
+#. §5: `simp_all`
+#. §6: ```lean
+#. -- World 1 (manual):
+#. induction xs with
+#. | nil          => simp
+#. | cons x xs ih => simp [ih]; omega
+#. 
+#. -- World 3 (automated):
+#. induction xs <;> simp_all <;> omega
+#. ```
+#. §7: `induction xs`
+#. §8: `simp_all`
+#: Game.Levels.AutomationPower.L01_SimpAll
+msgid "**Welcome to World 3: Automation Power!**\n"
+"\n"
+"You've proven programs correct one tactic at a time. In this world we hand\n"
+"more work to Lean's automation — the same proofs that took five lines will\n"
+"often collapse to one or two.\n"
+"\n"
+"Our first new tool is **§0**. You already know §1, which simplifies\n"
+"the *goal*. §2 goes further: it simplifies both the *goal* **and every\n"
+"hypothesis** in the context, then uses those simplified hypotheses to simplify\n"
+"further — repeating until nothing changes.\n"
+"\n"
+"The big win comes during **induction**: the induction hypothesis §3 is\n"
+"automatically incorporated. You never need to write §4 again — just\n"
+"§5.\n"
+"\n"
+"**Compare the World 1 proof of this same theorem:**\n"
+"§6\n"
+"\n"
+"Your goal is to prove that concatenating two lists produces a list whose\n"
+"length is the sum of the parts. Use §7 and let §8\n"
+"handle the inductive step automatically."
+msgstr "**Welcome to World 3: Automation Power!**\n"
+"\n"
+"You've proven programs correct one tactic at a time. In this world we hand\n"
+"more work to Lean's automation — the same proofs that took five lines will\n"
+"often collapse to one or two.\n"
+"\n"
+"Our first new tool is **§0**. You already know §1, which simplifies\n"
+"the *goal*. §2 goes further: it simplifies both the *goal* **and every\n"
+"hypothesis** in the context, then uses those simplified hypotheses to simplify\n"
+"further — repeating until nothing changes.\n"
+"\n"
+"The big win comes during **induction**: the induction hypothesis §3 is\n"
+"automatically incorporated. You never need to write §4 again — just\n"
+"§5.\n"
+"\n"
+"**Compare the World 1 proof of this same theorem:**\n"
+"§6\n"
+"\n"
+"Your goal is to prove that concatenating two lists produces a list whose\n"
+"length is the sum of the parts. Use §7 and let §8\n"
+"handle the inductive step automatically."
+
+#. §0: `myMap`
+#. §1: `f`
+#: Game.Levels.PurePrograms.L01_MyMap
+msgid "Nice work! §0 always produces a list of the same length — regardless of what\n"
+"function §1 does. This is a simple structural property that follows directly from\n"
+"how the recursion is structured."
+msgstr "Nice work! §0 always produces a list of the same length — regardless of what\n"
+"function §1 does. This is a simple structural property that follows directly from\n"
+"how the recursion is structured."
+
+#: Game.Levels.Termination
+msgid "Termination"
+msgstr "Termination"
+
+#. §0: `.sorted`
+#: Game.Levels.ProofsInTypes.L06_SortedList
+msgid "The sorted proof is a struct field. Access it with §0."
+msgstr "The sorted proof is a struct field. Access it with §0."
+
+#: Game.Levels.FirstProofs.L05_GcdStep
+msgid "GCD Step"
+msgstr "GCD Step"
+
+#. §0: `cases h : p x`
+#. §1: `p x = true`
+#. §2: `p x = false`
+#. §3: `h`
+#. §4: `simp_all`
+#. §5: `myFilter`
+#. §6: `x :: xs`
+#. §7: `h`
+#. §8: `(fun x => !p x) x`
+#. §9: `!p x`
+#. §10: `!true`
+#. §11: `!false`
+#. §12: `omega`
+#. §13: `k + (j+1) = 1+n`
+#. §14: `@[simp]`
+#. §15: `myMap`
+#. §16: `myFilter`
+#: Game.Levels.AutomationPower.L05_FilterPartition
+msgid "§0 splits on whether §1 or §2,\n"
+"naming the result §3 for use in subsequent tactics.\n"
+"\n"
+"§4 then:\n"
+"- Unfolds §5 on §6 using §7\n"
+"- Beta-reduces §8 to §9\n"
+"- Simplifies §10 or §11 to resolve the complementary filter case\n"
+"\n"
+"§12 closes the remaining arithmetic (§13 style goals).\n"
+"\n"
+"With §14 on both §15 and §16, we're ready for the\n"
+"grand finale."
+msgstr "§0 splits on whether §1 or §2,\n"
+"naming the result §3 for use in subsequent tactics.\n"
+"\n"
+"§4 then:\n"
+"- Unfolds §5 on §6 using §7\n"
+"- Beta-reduces §8 to §9\n"
+"- Simplifies §10 or §11 to resolve the complementary filter case\n"
+"\n"
+"§12 closes the remaining arithmetic (§13 style goals).\n"
+"\n"
+"With §14 on both §15 and §16, we're ready for the\n"
+"grand finale."
+
+#. §0: `node`
+#: Game.Levels.PurePrograms.L05_Tree
+msgid "Every §0 has height at least 1 — because we add 1 to the maximum of its children's heights.\n"
+"\n"
+"Trees open the door to efficient data structures. In the next level, we'll build a\n"
+"**Binary Search Tree** and prove its core correctness property."
+msgstr "Every §0 has height at least 1 — because we add 1 to the maximum of its children's heights.\n"
+"\n"
+"Trees open the door to efficient data structures. In the next level, we'll build a\n"
+"**Binary Search Tree** and prove its core correctness property."
+
+#: Game.Levels.PrePost
+msgid "Pre/Post Conditions"
+msgstr "Pre/Post Conditions"
+
+#. §0: `double n`
+#: Game.Levels.FirstProofs.L02_IsEven
+msgid "§0 is always even."
+msgstr "§0 is always even."
+
+#. §0: `SortedList.insert`
+#. §1: `SortedList`
+#. §2: `List Nat`
+#. §3: ```lean
+#. def SortedList.insert (x : Nat) (sl : SortedList) : SortedList :=
+#.   ⟨insertSorted x sl.data, insertSorted_sorted x sl.data sl.sorted⟩
+#. ```
+#. §4: `insertSorted_sorted x sl.data sl.sorted`
+#. §5: `obtain`
+#. §6: `h : A ∧ B`
+#. §7: `⟨h1, h2⟩`
+#: Game.Levels.ProofsInTypes.L08_Victory
+msgid "The payoff: a §0 that **returns a §1**, not a bare §2.\n"
+"\n"
+"§3\n"
+"\n"
+"The proof §4 is baked into the return type.\n"
+"You cannot call this function incorrectly, and its result is guaranteed sorted for\n"
+"**all** inputs — verified once at compile time.\n"
+"\n"
+"No unit test. No runtime assertion. No documentation that might drift. The type says it all.\n"
+"\n"
+"First, a helper lemma: the inserted element is always in the result.\n"
+"Use §5 to destructure hypotheses of the form §6 into §7."
+msgstr "The payoff: a §0 that **returns a §1**, not a bare §2.\n"
+"\n"
+"§3\n"
+"\n"
+"The proof §4 is baked into the return type.\n"
+"You cannot call this function incorrectly, and its result is guaranteed sorted for\n"
+"**all** inputs — verified once at compile time.\n"
+"\n"
+"No unit test. No runtime assertion. No documentation that might drift. The type says it all.\n"
+"\n"
+"First, a helper lemma: the inserted element is always in the result.\n"
+"Use §5 to destructure hypotheses of the form §6 into §7."
+
+#. §0: `n`
+#. §1: `n > 1`
+#. §2: `k`
+#. §3: `[2, n-1]`
+#: Game.Levels.FirstProofs.L07_Primality
+msgid "§0 is prime iff §1 and it is coprime with all §2 in §3."
+msgstr "§0 is prime iff §1 and it is coprime with all §2 in §3."
+
+#. §0: `b ≠ 0`
+#. §1: `myGcd a b`
+#. §2: `myGcd b (a % b)`
+#. §3: ```
+#. b ≠ 0 → myGcd a b = myGcd b (a % b)
+#. ```
+#. §4: `cases b`
+#. §5: `b = 0`
+#. §6: `b = b' + 1`
+#. §7: `simp [myGcd]`
+#: Game.Levels.FirstProofs.L05_GcdStep
+msgid "Now prove the **recursive step** of the Euclidean algorithm:\n"
+"when §0, §1 reduces to §2.\n"
+"\n"
+"§3\n"
+"\n"
+"*Tip*: Use §4 to split into §5 (contradiction) and §6\n"
+"(where §7 applies the second equation of the definition)."
+msgstr "Now prove the **recursive step** of the Euclidean algorithm:\n"
+"when §0, §1 reduces to §2.\n"
+"\n"
+"§3\n"
+"\n"
+"*Tip*: Use §4 to split into §5 (contradiction) and §6\n"
+"(where §7 applies the second equation of the definition)."
+
+#. §0: `decreasing_by omega`
+#: Game.Levels.PurePrograms.L04_Half
+msgid "The second part is the exact inequality §0 proves\n"
+"automatically. Can you prove it manually?"
+msgstr "The second part is the exact inequality §0 proves\n"
+"automatically. Can you prove it manually?"
+
+#. §0: ```
+#. def double (n : Nat) : Nat := n + n
+#. ```
+#. §1: `double`
+#. §2: `n`
+#: Game.Levels.FirstProofs.L01_Double
+msgid "Welcome to the **Program Verification Game**!\n"
+"\n"
+"In this game you will write mathematical proofs to verify that programs are correct.\n"
+"The Lean proof assistant checks every step — there is no way to cheat.\n"
+"\n"
+"Your first program:\n"
+"§0\n"
+"\n"
+"§1 is supposed to double its input.\n"
+"Prove that it always does — for **every** natural number §2."
+msgstr "Welcome to the **Program Verification Game**!\n"
+"\n"
+"In this game you will write mathematical proofs to verify that programs are correct.\n"
+"The Lean proof assistant checks every step — there is no way to cheat.\n"
+"\n"
+"Your first program:\n"
+"§0\n"
+"\n"
+"§1 is supposed to double its input.\n"
+"Prove that it always does — for **every** natural number §2."
+
+#. §0: `Nat`
+#: Game.Levels.ProofsInTypes.L05_Sorted
+msgid "Predicate: a list of §0 is sorted in non-decreasing order."
+msgstr "Predicate: a list of §0 is sorted in non-decreasing order."
+
+#. §0: `myMap`
+#. §1: `@[simp]`
+#. §2: `myMap`
+#. §3: ```lean
+#. myMap f (l₁ ++ l₂) = myMap f l₁ ++ myMap f l₂
+#. ```
+#. §4: `@[simp]`
+#. §5: `myMap`
+#. §6: ```lean
+#. induction l₁ with
+#. | nil          => simp [myMap]
+#. | cons x xs ih => simp [myMap, ih]
+#. ```
+#. §7: `@[simp]`
+#. §8: `simp_all`
+#. §9: `myMap`
+#. §10: ```lean
+#. induction l₁ <;> simp_all
+#. ```
+#: Game.Levels.AutomationPower.L04_MapAppend
+msgid "Now that §0's equations are tagged §1, let's prove a new\n"
+"structural theorem with almost no effort.\n"
+"\n"
+"**§2 distributes over list concatenation**:\n"
+"§3\n"
+"\n"
+"Mapping over a concatenated list is the same as mapping each part and\n"
+"concatenating the results. This is the *functor* distributivity law.\n"
+"\n"
+"In World 2, without §4 on §5, you would have written:\n"
+"§6\n"
+"\n"
+"With §7 already in place, plain §8 suffices — it knows\n"
+"about §9 automatically and finds the IH in the context:\n"
+"§10\n"
+"\n"
+"Try it!"
+msgstr "Now that §0's equations are tagged §1, let's prove a new\n"
+"structural theorem with almost no effort.\n"
+"\n"
+"**§2 distributes over list concatenation**:\n"
+"§3\n"
+"\n"
+"Mapping over a concatenated list is the same as mapping each part and\n"
+"concatenating the results. This is the *functor* distributivity law.\n"
+"\n"
+"In World 2, without §4 on §5, you would have written:\n"
+"§6\n"
+"\n"
+"With §7 already in place, plain §8 suffices — it knows\n"
+"about §9 automatically and finds the IH in the context:\n"
+"§10\n"
+"\n"
+"Try it!"
+
+#. §0: `Nat`
+#: Game.Levels.ProofsInTypes.L06_SortedList
+msgid "A list of §0 paired with a proof that it is sorted."
+msgstr "A list of §0 paired with a proof that it is sorted."
+
+#. §0: `simp`
+#. §1: `omega`
+#. §2: `induction`
+#. §3: `decide`
+#: Game.Levels.FirstProofs
+msgid "Welcome to **World 1: First Proofs**!\n"
+"\n"
+"In this world you will:\n"
+"- Write your first verified programs in Lean 4\n"
+"- Learn the core proof tactics: §0, §1, §2, §3\n"
+"- Build and verify the **Euclidean GCD algorithm** from scratch\n"
+"- Use your verified GCD to check primality\n"
+"\n"
+"By the end, you'll understand what it means to formally verify a program —\n"
+"and you'll have done it yourself."
+msgstr "Welcome to **World 1: First Proofs**!\n"
+"\n"
+"In this world you will:\n"
+"- Write your first verified programs in Lean 4\n"
+"- Learn the core proof tactics: §0, §1, §2, §3\n"
+"- Build and verify the **Euclidean GCD algorithm** from scratch\n"
+"- Use your verified GCD to check primality\n"
+"\n"
+"By the end, you'll understand what it means to formally verify a program —\n"
+"and you'll have done it yourself."
+
+#. §0: `simp_all`
+#. §1: `grind`
+#. §2: `grind`
+#. §3: `grind [lemma, ...]`
+#. §4: `grind`
+#. §5: `double n = n + n`
+#. §6: `double`
+#. §7: `double n = double m`
+#. §8: `n = m`
+#. §9: ```lean
+#. double_injective : ∀ (n m : Nat), double n = double m → n = m
+#. ```
+#. §10: `intro n m h; grind [double]`
+#. §11: `grind [double]`
+#. §12: `double`
+#. §13: `h : double n = double m`
+#. §14: `n + n = m + m`
+#. §15: `n = m`
+#: Game.Levels.AutomationPower.L03_Grind
+msgid "§0 is great for simplification. But some goals need more:\n"
+"they require combining **equality reasoning** with **arithmetic**.\n"
+"\n"
+"Enter **§1** — an automated prover that handles both at once.\n"
+"§2 performs *congruence closure* (equality reasoning) and integrates\n"
+"linear arithmetic. Feed it lemmas with §3 and it hunts\n"
+"for a proof automatically.\n"
+"\n"
+"Let's put §4 to work on a new theorem from World 1 material.\n"
+"\n"
+"You know §5. Now prove that §6 is **injective**:\n"
+"if §7, then §8.\n"
+"\n"
+"§9\n"
+"\n"
+"Try §10.\n"
+"§11 tells the prover to use §12's definition as a rule.\n"
+"It then rewrites §13 to §14 and deduces\n"
+"§15 via arithmetic — all automatically."
+msgstr "§0 is great for simplification. But some goals need more:\n"
+"they require combining **equality reasoning** with **arithmetic**.\n"
+"\n"
+"Enter **§1** — an automated prover that handles both at once.\n"
+"§2 performs *congruence closure* (equality reasoning) and integrates\n"
+"linear arithmetic. Feed it lemmas with §3 and it hunts\n"
+"for a proof automatically.\n"
+"\n"
+"Let's put §4 to work on a new theorem from World 1 material.\n"
+"\n"
+"You know §5. Now prove that §6 is **injective**:\n"
+"if §7, then §8.\n"
+"\n"
+"§9\n"
+"\n"
+"Try §10.\n"
+"§11 tells the prover to use §12's definition as a rule.\n"
+"It then rewrites §13 to §14 and deduces\n"
+"§15 via arithmetic — all automatically."
+
+#: Game.Levels.DataInvariants.L01_Stub Game.Levels.Termination.L01_Stub Game.Levels.PrePost.L01_Stub Game.Levels.ImperativeIntro.L01_Stub Game.Levels.ImperativeBoss.L01_Stub
+msgid "Placeholder theorem for this stub world."
+msgstr "Placeholder theorem for this stub world."
+
+#. §0: `use expr`
+#. §1: `⊢ ∃ x, P x`
+#. §2: `P expr`
+#: Game.Levels.ProofsInTypes.L01_Subtype
+msgid "Supply a witness for an existential goal: §0 closes §1 when §2 holds."
+msgstr "Supply a witness for an existential goal: §0 closes §1 when §2 holds."
