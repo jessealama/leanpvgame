@@ -63,7 +63,7 @@ lake build
 
 ```bash
 cd ../lean4game
-GAME_DIR=/path/to/pvgame npm start
+VITE_LEAN4GAME_SINGLE=true VITE_LEAN4GAME_SINGLE_NAME=pvgame npm start
 # Visit http://localhost:3000
 ```
 
